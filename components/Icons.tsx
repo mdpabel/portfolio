@@ -368,3 +368,72 @@ export const TwitterIcon = () => (
     </g>
   </svg>
 );
+
+export const ArrowUpRight = () => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='35px'
+    height='35px'
+    viewBox='0 0 24 24'
+    fill='none'
+    className='inline-block'
+  >
+    <g id='Arrow / Arrow_Up_Right_SM'>
+      <path
+        id='Vector'
+        d='M8 16L16 8M16 8H10M16 8V14'
+        stroke='#525255'
+        strokeWidth='1'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </g>
+  </svg>
+);
+
+export const ArrowRight = () => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    fill='none'
+    viewBox='0 0 24 24'
+    strokeWidth={1.5}
+    stroke='currentColor'
+    className='inline-block w-6 h-6'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      d='M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75'
+    />
+  </svg>
+);
+
+export const CrossIcon = ({ className }: { className: string }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    data-name='Layer 1'
+    viewBox='0 0 64 64'
+    className={className}
+  >
+    <line
+      x1='9.37'
+      x2='54.63'
+      y1='9.37'
+      y2='54.63'
+      fill='none'
+      stroke='#010101'
+      strokeMiterlimit='10'
+      strokeWidth='4'
+    />
+    <line
+      x1='9.37'
+      x2='54.63'
+      y1='54.63'
+      y2='9.37'
+      fill='none'
+      stroke='#010101'
+      strokeMiterlimit='10'
+      strokeWidth='4'
+    />
+  </svg>
+);

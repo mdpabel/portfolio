@@ -3,6 +3,7 @@ import ProjectCard from './ProjectCard';
 import Title from './Title';
 import Link from 'next/link';
 import Button from './Button';
+import { ArrowRight } from './Icons';
 
 const works = [
   {
@@ -22,7 +23,11 @@ const works = [
       'Next-auth',
       'pusher',
     ],
-    Button: <Button href='/'>View Case Study</Button>,
+    Button: (
+      <Button href='/'>
+        View Case Study <ArrowRight />
+      </Button>
+    ),
   },
   {
     number: '02',
@@ -42,7 +47,11 @@ const works = [
       'IoT sensors',
       'socket.io',
     ],
-    Button: <Button href='/'>View Case Study</Button>,
+    Button: (
+      <Button href='/'>
+        View Case Study <ArrowRight />
+      </Button>
+    ),
   },
 ];
 

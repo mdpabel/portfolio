@@ -5,7 +5,7 @@ const Button = ({ children, href }: { children: ReactNode; href: string }) => (
   <div>
     <Link
       href={href}
-      className='px-4 py-2 text-sm bg-white rounded-md text-paragraph'
+      className='px-4 py-2 text-sm rounded-md bg-slate-50 text-paragraph'
     >
       {children}
     </Link>

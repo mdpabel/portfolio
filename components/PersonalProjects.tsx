@@ -4,6 +4,7 @@ import Title from './Title';
 import snakeImg from '../assets/snakge-game-mdpabel.jpg';
 import Link from 'next/link';
 import Button from './Button';
+import { ArrowUpRight } from './Icons';
 
 const projects = [
   {
@@ -20,7 +21,11 @@ const projects = [
       'use-sound',
       'tailwindcss',
     ],
-    Button: <Button href='/'>Live Link</Button>,
+    Button: (
+      <Button href='/'>
+        Live Link <ArrowUpRight />
+      </Button>
+    ),
   },
 ];
 

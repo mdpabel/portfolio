@@ -11,9 +11,7 @@ const Header = () => {
       <div className='text-2xl text-gray-600'>
         <Link href='/'>{'<Pabel />'}</Link>
       </div>
-      {/* <div>
-        <Tab />
-      </div> */}
+
       <div>
         <ul className='items-center hidden space-x-6 text-gray-600 md:flex'>
           <li>

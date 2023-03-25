@@ -12,7 +12,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
       <section
         style={{
           marginTop: '100px',
-          marginBottom: '100px',
+          marginBottom: '20px',
         }}
       >
         {children}

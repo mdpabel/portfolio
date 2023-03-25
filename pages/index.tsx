@@ -16,13 +16,12 @@ function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <>
+      <div className='flex flex-col'>
         <Hero />
         <Skills />
         <Works />
         <PersonalProjects />
-        <Activities />
-      </>
+      </div>
     </>
   );
 }

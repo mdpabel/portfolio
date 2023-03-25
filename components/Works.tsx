@@ -5,7 +5,7 @@ import Title from './Title';
 const works = [
   {
     number: '01',
-    top: '10%',
+    top: '14%',
     title: 'TMMEmploy',
     subTitle: 'Full stack application',
     imgUrl:
@@ -23,7 +23,7 @@ const works = [
   },
   {
     number: '02',
-    top: '12%',
+    top: '16%',
     title: 'Real time vehicle tracking system',
     subTitle: 'Full stack application',
     imgUrl:
@@ -44,8 +44,8 @@ const works = [
 
 const Works = () => {
   return (
-    <div className='mt-[150px] '>
-      <Title className='sticky top-5'>Works</Title>
+    <div className='mt-[150px]  max-w-[90%] mx-auto'>
+      <Title className='md:sticky top-2'>Works</Title>
       <div>
         {works.map((work, index) => (
           <ProjectCard

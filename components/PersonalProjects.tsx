@@ -10,15 +10,21 @@ const projects = [
     title: 'Snake game',
     subTitle: 'Frontend application',
     imgUrl: snakeImg,
-    description: `A snake game was created using React and JavaScript. A doubly linked list was utilized to enable efficient manipulation of the snake's movements and growth, resulting in a seamless and engaging gaming experience.`,
-    technologies: ['Javascript', 'React', 'Doubly Linked list', 'use-sound'],
+    description: `A doubly linked list was utilized to enable efficient manipulation of the snake's movements and growth, resulting in a seamless and engaging gaming experience.`,
+    technologies: [
+      'Javascript',
+      'React',
+      'Doubly Linked list',
+      'use-sound',
+      'tailwindcss',
+    ],
   },
 ];
 
 const PersonalProjects = () => {
   return (
-    <div className='mt-[150px] '>
-      <Title className='sticky top-5'>Personal Projects</Title>
+    <div className='md:mt-[30px]'>
+      <Title className='md:sticky top-5'>Personal Projects</Title>
       <div>
         {projects.map((work, index) => (
           <ProjectCard

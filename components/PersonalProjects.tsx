@@ -2,6 +2,8 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 import Title from './Title';
 import snakeImg from '../assets/snakge-game-mdpabel.jpg';
+import Link from 'next/link';
+import Button from './Button';
 
 const projects = [
   {
@@ -18,6 +20,7 @@ const projects = [
       'use-sound',
       'tailwindcss',
     ],
+    Button: <Button href='/'>Live Link</Button>,
   },
 ];
 
@@ -28,6 +31,7 @@ const PersonalProjects = () => {
       <div>
         {projects.map((work, index) => (
           <ProjectCard
+            Button={work.Button}
             imgUrl={work.imgUrl}
             number={work.number}
             technologies={work.technologies}

@@ -1,6 +1,8 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 import Title from './Title';
+import Link from 'next/link';
+import Button from './Button';
 
 const works = [
   {
@@ -20,6 +22,7 @@ const works = [
       'Next-auth',
       'pusher',
     ],
+    Button: <Button href='/'>View Case Study</Button>,
   },
   {
     number: '02',
@@ -39,6 +42,7 @@ const works = [
       'IoT sensors',
       'socket.io',
     ],
+    Button: <Button href='/'>View Case Study</Button>,
   },
 ];
 
@@ -46,9 +50,10 @@ const Works = () => {
   return (
     <div className='mt-[150px]  max-w-[90%] mx-auto'>
       <Title className='md:sticky top-2'>Works</Title>
-      <div>
+      <div className='flex flex-col '>
         {works.map((work, index) => (
           <ProjectCard
+            Button={work.Button}
             imgUrl={work.imgUrl}
             number={work.number}
             technologies={work.technologies}

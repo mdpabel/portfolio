@@ -9,6 +9,7 @@ interface ProjectCardType {
   description: string;
   imgUrl: string | StaticImageData;
   technologies: string[];
+  Button: any;
 }
 
 const ProjectCard = ({
@@ -19,6 +20,7 @@ const ProjectCard = ({
   description,
   imgUrl,
   technologies,
+  Button,
 }: ProjectCardType) => {
   return (
     <div
@@ -26,12 +28,12 @@ const ProjectCard = ({
         backgroundColor: '#f1f0f0',
         top: top ? top : '10%',
       }}
-      className='flex px-10 md:px-20 py-10 md:sticky rounded-2xl gap-4 flex-col md:flex-row max-w-6xl mx-auto md:max-h-[80vh] my-10 justify-between shadow-sm border'
+      className='flex px-10 md:px-20 py-10 md:sticky rounded-2xl gap-4 flex-col md:flex-row max-w-4xl mx-auto md:max-h-[80vh] my-10 justify-between shadow-sm border'
     >
       <div className='flex flex-col justify-between w-full space-y-4 md:w-2/3 '>
         <h2 className='text-2xl font-medium text-gray-600'>{number}</h2>
         <div className='space-y-3 '>
-          <h2 className='inline-block text-gray-500 font-bold text-2xl md:text-3xl  tracking-[-1.25px] '>
+          <h2 className='inline-block text-gray-500 font-medium text-2xl md:text-3xl tracking-[-1.25px] '>
             {title}
           </h2>
           <h3 className='font-medium text-gray-600'>{subTitle}</h3>
@@ -40,16 +42,9 @@ const ProjectCard = ({
           <p className='text-base leading-normal text-paragraph'>
             {description}
           </p>
-          <button
-            style={{
-              backgroundColor: '#dfdfdf',
-            }}
-            className='px-4 py-2 text-sm rounded-md bg-gray-50 text-paragraph'
-          >
-            View Case Study
-          </button>
+          {Button}
         </div>
-        <ul className='flex flex-wrap text-sm list-disc list-inside gap-x-4 text-paragraph'>
+        <ul className='flex flex-wrap pt-4 text-sm list-disc list-inside gap-x-4 text-paragraph'>
           {technologies.map((label, index) => (
             <li key={index} className=''>
               {label}

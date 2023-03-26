@@ -1,11 +1,14 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { BarIcon, ArrowUpRight, CrossIcon } from './Icons';
-import Tab from './Tab';
 
-const Header = () => {
-  const [open, setOpen] = useState(false);
-
+const Header = ({
+  open,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}) => {
   return (
     <header className='relative flex items-center justify-between h-16 max-w-6xl px-8 mx-auto mt-10 '>
       <div className='text-2xl text-gray-600'>
@@ -22,7 +25,7 @@ const Header = () => {
           </li>
           <li className=''>
             <Link
-              className='flex items-center py-2 shadow-lg px-7 bg-slate-50 rounded-3xl'
+              className='flex items-center py-2 shadow-lg px-7 bg-slate-50 rounded-3xl '
               href='https://drive.google.com/file/d/1A6I4qF3WBwlKskaAT23G5volEAJ-9i4T/view?usp=share_link'
               target='_blank'
             >
@@ -55,23 +58,7 @@ const Header = () => {
                 className='block py-2 pl-3 pr-4 text-gray-700 rounded '
                 aria-current='page'
               >
-                Home
-              </Link>
-            </li>
-            <li onClick={() => setOpen(false)} className='border-b'>
-              <Link
-                href='/'
-                className='block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 '
-              >
-                Services
-              </Link>
-            </li>
-            <li onClick={() => setOpen(false)} className='border-b'>
-              <Link
-                href='/'
-                className='block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 '
-              >
-                Pricing
+                About
               </Link>
             </li>
             <li onClick={() => setOpen(false)} className='border-b'>
@@ -80,6 +67,15 @@ const Header = () => {
                 className='block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 '
               >
                 Contact
+              </Link>
+            </li>
+            <li onClick={() => setOpen(false)} className='border-b'>
+              <Link
+                className='block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 '
+                href='https://drive.google.com/file/d/1A6I4qF3WBwlKskaAT23G5volEAJ-9i4T/view?usp=share_link'
+                target='_blank'
+              >
+                My CV <ArrowUpRight />
               </Link>
             </li>
           </ul>

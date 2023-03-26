@@ -149,35 +149,35 @@ const Skills = () => {
       {/* start  */}
       <div className='relative block w-full md:hidden'>
         <ul className='flex w-full'>
-          <li className='h-[635px] w-1/5 text-center relative'>
+          <li className='h-[580px] w-1/5 text-center relative'>
             <div className='h-8 mt-4 text-sm'>
               <strong>Uh? </strong>
             </div>
             <div className='absolute w-[1px] h-full bg-gray-300 left-0'></div>
           </li>
 
-          <li className='h-[635px] w-1/5 text-center relative'>
+          <li className='h-[580px] w-1/5 text-center relative'>
             <div className='h-8 mt-4 text-sm'>
               <strong>Basic</strong>
             </div>
             <div className='absolute w-[1px] h-full bg-gray-300 left-0'></div>
           </li>
 
-          <li className='h-[635px] w-1/5 text-center relative'>
+          <li className='h-[580px] w-1/5 text-center relative'>
             <div className='h-8 mt-4 text-sm'>
               <strong className='pr-4'>Medium</strong>
             </div>
             <div className='absolute w-[1px] h-full bg-gray-300 left-0'></div>
           </li>
 
-          <li className='h-[635px] w-1/5 text-center relative'>
+          <li className='h-[580px] w-1/5 text-center relative'>
             <div className='h-8 mt-4 text-sm'>
               <strong>High</strong>
             </div>
             <div className='absolute w-[1px] h-full bg-gray-300 left-0'></div>
           </li>
 
-          <li className='h-[635px] w-1/5 text-center relative'>
+          <li className='h-[580px] w-1/5 text-center relative'>
             <div className='h-8 mt-4 text-sm'>
               <strong> master</strong> <br />
             </div>

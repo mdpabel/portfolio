@@ -185,7 +185,7 @@ const Skills = () => {
           </li>
         </ul>
 
-        <ul className='absolute w-full space-y-3 top-28'>
+        <ul className='absolute w-full space-y-3 top-16'>
           {skillsArray.map((item, index) => (
             <SkillSM
               level={item.level}

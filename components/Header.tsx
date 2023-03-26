@@ -51,7 +51,7 @@ const Header = ({
           }}
           className='block w-full md:hidden'
         >
-          <ul className='absolute right-0 z-50 flex flex-col w-full px-8 mt-4 bg-gray-100 rounded-lg md:hidden top-10 '>
+          <ul className='absolute right-0 z-50 flex flex-col w-full px-8 mt-4 bg-gray-100 rounded-lg md:hidden top-10'>
             <li onClick={() => setOpen(false)} className='border-b'>
               <Link
                 href='/'

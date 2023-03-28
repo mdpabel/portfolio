@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { EmailIcon, FBIcon, TwitterIcon } from './Icons';
+import { EmailIcon, FBIcon, PhoneIcon, TwitterIcon } from './Icons';
 
 const Footer = () => {
   return (
@@ -11,9 +11,12 @@ const Footer = () => {
       className='flex flex-col items-center gap-4 p-10'
     >
       <div className='flex gap-4'>
-        <a href='mailto:mdpabel385@gmail.com'>
+        <Link href='mailto:mdpabel385@gmail.com'>
           <EmailIcon />
-        </a>
+        </Link>
+        <Link href='tel:+8801761442268'>
+          <PhoneIcon />
+        </Link>
         <Link href='https://facebook.com/mdpabe1' target='_blank'>
           <FBIcon />
         </Link>

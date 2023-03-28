@@ -7,6 +7,7 @@ import {
   CodeBracket,
   CodeForces,
   ComputerIcon,
+  CVIcon,
   DBIcon,
   GithubIcon,
   HackerRank,
@@ -14,6 +15,7 @@ import {
   LocationIcon,
   ServerIcon,
 } from '@/components/Icons';
+import cvIcon from '../assets/cvicon.png';
 import { useState } from 'react';
 import Link from 'next/link';
 
@@ -57,66 +59,6 @@ function Hero() {
             <AcademicCap />
           </div>
         </div>
-        {/* <div
-          onMouseMove={handleMouseMove}
-          className='absolute w-full md:w-[800px] h-[320px] -top-[108x] px-8'
-        >
-          <ChipIcon
-            style={{
-              transform: `translate3d(${translateX}px, ${translateY}px, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-26deg) skew(0deg, 0deg)`,
-            }}
-            className='absolute md:top-0 w-[17px] h-[17px] text-gray-700 opacity-70'
-          />
-          <ServerIcon
-            style={{
-              transform: `translate3d(${translateX * 1.2}px, ${
-                translateY * 1.2
-              }px, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-26deg) skew(0deg, 0deg)`,
-            }}
-            className='absolute text-gray-700 top-10 right-5 md:right-10'
-          />
-          <DBIcon
-            style={{
-              transform: `translate3d(${translateX * 1.4}px, ${
-                translateY * 1.4
-              }px, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-26deg) skew(0deg, 0deg)`,
-            }}
-            className='absolute w-[32px] h-[32px] text-gray-700 top-1/3 left-5 md:left-32 opacity-40'
-          />
-          <CodeBracket
-            style={{
-              transform: `translate3d(${translateX * 1.6}px, ${
-                translateY * 1.6
-              }px, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-26deg) skew(0deg, 0deg)`,
-            }}
-            className='absolute w-[18px] h-[18px] md:top-32 top-1/2 left-2/3 md:left-2/3 text-gray-700 opacity-60'
-          />
-          <ComputerIcon
-            style={{
-              transform: `translate3d(${translateX * 1.8}px, ${
-                translateY * 1.8
-              }px, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-26deg) skew(0deg, 0deg)`,
-            }}
-            className='absolute bottom-0 w-[15px]  text-gray-700'
-          />
-          <CalculatorIcon
-            style={{
-              transform: `translate3d(${translateX * 2}px, ${
-                translateY * 2
-              }px, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-26deg) skew(0deg, 0deg)`,
-            }}
-            className='absolute right-5 md:right-0 w-[16px] h-[16px] bottom-2 md:bottom-20 text-gray-800 opacity-80'
-          />
-          <ChipIcon
-            style={{
-              transform: `translate3d(${translateX * 1.6}px, ${
-                translateY * 1.6
-              }px, 0) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-26deg) skew(0deg, 0deg)`,
-            }}
-            className='absolute bottom-0 w-[32px] h-[32px] text-gray-700 opacity-50 left-1/2 md:left-2/3'
-          />
-        </div> */}
-
         <div className='flex gap-6 pt-10'>
           <Link target='_blank' href='https://leetcode.com/mdpabel/'>
             <LeetCodeIcon />
@@ -127,8 +69,15 @@ function Hero() {
           <Link target='_blank' href='https://www.hackerrank.com/mdpabel385'>
             <HackerRank />
           </Link>
-          <Link target='_blank' href='https://codeforces.com/profile/MD_Pabel'>
+          {/* <Link target='_blank' href='https://codeforces.com/profile/MD_Pabel'>
             <CodeForces />
+          </Link> */}
+          <Link
+            target='_blank'
+            href='https://drive.google.com/file/d/1A6I4qF3WBwlKskaAT23G5volEAJ-9i4T/view'
+          >
+            {/* <Image src={cvIcon} alt='CV Icon' width={24} height={24} /> */}
+            <CVIcon />
           </Link>
         </div>
       </div>

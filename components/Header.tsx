@@ -54,7 +54,7 @@ const Header = ({
           <ul className='absolute right-0 z-50 flex flex-col w-full px-8 mt-4 bg-gray-100 rounded-lg md:hidden top-10'>
             <li onClick={() => setOpen(false)} className='border-b'>
               <Link
-                href='/'
+                href='/about'
                 className='block py-2 pl-3 pr-4 text-gray-700 rounded '
                 aria-current='page'
               >
@@ -63,7 +63,7 @@ const Header = ({
             </li>
             <li onClick={() => setOpen(false)} className='border-b'>
               <Link
-                href='/'
+                href='/contact'
                 className='block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 '
               >
                 Contact

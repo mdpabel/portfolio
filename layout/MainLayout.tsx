@@ -15,6 +15,7 @@ const MainLayout = ({ children }: { children: ReactNode }) => {
         style={{
           marginTop: '100px',
           marginBottom: '20px',
+          minHeight: '70vh',
         }}
       >
         {children}

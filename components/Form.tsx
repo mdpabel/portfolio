@@ -2,7 +2,7 @@ import React from 'react';
 
 const Form = () => {
   return (
-    <form action='#' className='space-y-8'>
+    <form className='px-10 space-y-8'>
       <div>
         <input
           type='email'

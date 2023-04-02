@@ -77,10 +77,10 @@ const About = () => {
             , I decided to take action. I initially tried learning C++ and
             continued to solve problems using this language. However, I
             eventually found that my true passion lay in using Python. I
-            migrated to Python and have been solving problems with it ever
-            since. To further improve my skills, I entered on a journey to
-            master <strong>data structures and algorithms</strong>. I tackled
-            numerous problems on popular coding platforms such as{' '}
+            <strong>migrated to Python and have been solving problems</strong>{' '}
+            with it ever since. To further improve my skills, I entered on a
+            journey to master <strong>data structures and algorithms</strong>. I
+            tackled numerous problems on popular coding platforms such as{' '}
             <strong>LeetCode</strong> and <strong>HackerRank</strong>,
             ultimately solving over <strong>700 problems</strong>, including
             database-related problems.

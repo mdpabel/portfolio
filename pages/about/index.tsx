@@ -22,7 +22,7 @@ const About = () => {
         <p className='leading-relaxed paragraphSize text-paragraph'>
           As the famous saying goes,{' '}
           <strong>
-            &ldquo;I grow old too soon and get smart too late,&ldquo;
+            &ldquo;We grow old too soon and get smart too late,&ldquo;
           </strong>{' '}
           and this rings true for me as I reflect on my childhood. I grew up in
           a remote area of Bangladesh, where modern technology like televisions,

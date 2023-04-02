@@ -85,7 +85,7 @@ function Hero() {
             <CodeForces />
           </Link> */}
           <Link
-            aria-label='Resume'
+            aria-label='Open Resume'
             target='_blank'
             href='https://drive.google.com/file/d/1A6I4qF3WBwlKskaAT23G5volEAJ-9i4T/view'
           >

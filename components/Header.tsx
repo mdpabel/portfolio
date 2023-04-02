@@ -40,9 +40,12 @@ const Header = ({
           type='button'
         >
           {open ? (
-            <CrossIcon className='text-gray-800 w-7 h-7' />
+            <CrossIcon
+              aria-label='close menu'
+              className='text-gray-800 w-7 h-7'
+            />
           ) : (
-            <BarIcon className='w-8 h-8 text-gray-800' />
+            <BarIcon aria-label='Open menu' className='w-8 h-8 text-gray-800' />
           )}
         </button>
         <div

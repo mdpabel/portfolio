@@ -60,19 +60,32 @@ function Hero() {
           </div>
         </div>
         <div className='flex gap-6 pt-10'>
-          <Link target='_blank' href='https://leetcode.com/mdpabel/'>
+          <Link
+            aria-label='leetcode profile'
+            target='_blank'
+            href='https://leetcode.com/mdpabel/'
+          >
             <LeetCodeIcon />
           </Link>
-          <Link target='_blank' href='https://github.com/mdpabel'>
+          <Link
+            aria-label='github profile'
+            target='_blank'
+            href='https://github.com/mdpabel'
+          >
             <GithubIcon />
           </Link>
-          <Link target='_blank' href='https://www.hackerrank.com/mdpabel385'>
+          <Link
+            aria-label='hackerrank profile'
+            target='_blank'
+            href='https://www.hackerrank.com/mdpabel385'
+          >
             <HackerRank />
           </Link>
           {/* <Link target='_blank' href='https://codeforces.com/profile/MD_Pabel'>
             <CodeForces />
           </Link> */}
           <Link
+            aria-label='Resume'
             target='_blank'
             href='https://drive.google.com/file/d/1A6I4qF3WBwlKskaAT23G5volEAJ-9i4T/view'
           >

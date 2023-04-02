@@ -11,16 +11,24 @@ const Footer = () => {
       className='flex flex-col items-center gap-4 p-10'
     >
       <div className='flex gap-4'>
-        <Link href='mailto:mdpabel385@gmail.com'>
+        <Link aria-label='Email' href='mailto:mdpabel385@gmail.com'>
           <EmailIcon />
         </Link>
-        <Link href='tel:+8801761442268'>
+        <Link aria-label='Phone' href='tel:+8801761442268'>
           <PhoneIcon />
         </Link>
-        <Link href='https://facebook.com/mdpabe1' target='_blank'>
+        <Link
+          aria-label='Facebook'
+          href='https://facebook.com/mdpabe1'
+          target='_blank'
+        >
           <FBIcon />
         </Link>
-        <Link href='https://facebook.com/mdpabe1' target='_blank'>
+        <Link
+          aria-label='Twitter'
+          href='https://facebook.com/mdpabe1'
+          target='_blank'
+        >
           <TwitterIcon />
         </Link>
       </div>

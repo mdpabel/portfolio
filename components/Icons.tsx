@@ -198,6 +198,7 @@ export const ServerIcon = ({
 
 export const BarIcon = ({ className }: { className?: string }) => (
   <svg
+    aria-label='Open menu'
     xmlns='http://www.w3.org/2000/svg'
     fill='none'
     viewBox='0 0 24 24'
@@ -410,6 +411,7 @@ export const ArrowRight = () => (
 
 export const CrossIcon = ({ className }: { className: string }) => (
   <svg
+    aria-label='close menu'
     xmlns='http://www.w3.org/2000/svg'
     data-name='Layer 1'
     viewBox='0 0 64 64'

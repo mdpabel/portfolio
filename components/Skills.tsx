@@ -33,6 +33,10 @@ const skillsArray = [
     level: '165px',
   },
   {
+    label: 'Git, Github',
+    level: '145px',
+  },
+  {
     label: 'Express.js',
     level: '165px',
   },
@@ -147,7 +151,7 @@ const Skills = () => {
       <Title>My skills</Title>
 
       {/* start  */}
-      <div className='relative block w-full md:hidden'>
+      <div className='relative block w-full lg:hidden'>
         <ul className='flex w-full'>
           <li className='h-[580px] w-1/5 text-center relative'>
             <div className='h-8 mt-4 text-sm'>
@@ -198,7 +202,7 @@ const Skills = () => {
       </div>
       {/* end  */}
 
-      <div className='relative hidden w-full max-w-4xl md:block'>
+      <div className='relative hidden w-full max-w-4xl lg:block'>
         <ul className='w-full'>
           <li className='flex items-center justify-end w-full h-10 my-4 border-b'>
             <span className='w-[20%] h-8 mt-4 text-sm border-r-4 border-gray-900 md:w-1/4 md:mb-7'>

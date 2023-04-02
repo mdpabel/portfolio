@@ -22,7 +22,7 @@ const projects = [
       'tailwindcss',
     ],
     Button: (
-      <Button href='/'>
+      <Button href='https://snake-game-pi-amber.vercel.app/'>
         Live Link <ArrowUpRight />
       </Button>
     ),

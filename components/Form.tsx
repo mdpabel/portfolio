@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { FormEvent, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Form = () => {
+  const form = useRef();
+
+  const handleFormSubmission = (e: FormEvent) => {
+    e.preventDefault();
+
+    emailjs.sendForm(process.env.EMAIL_SERVICE_ID, );
+  };
+
   return (
-    <form className='px-10 space-y-8'>
+    <form
+      ref={form}
+      onSubmit={handleFormSubmission}
+      className='px-10 space-y-8'
+    >
       <div>
         <input
           type='email'

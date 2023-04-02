@@ -19,7 +19,7 @@ const About = () => {
             alt=''
           />
         </div>
-        <p className='leading-relaxed paragraphSize text-paragraph'>
+        <p className='leading-relaxed text-gray-500 paragraphSize'>
           As the famous saying goes,{' '}
           <strong>
             &ldquo;We grow old too soon and get smart too late,&ldquo;
@@ -32,7 +32,7 @@ const About = () => {
           that there were many things I didn&apos;t learn until later in life. I
           eventually learned these things the hard way, very late in my life.
         </p>
-        <p className='leading-relaxed paragraphSize text-paragraph'>
+        <p className='leading-relaxed text-gray-500 paragraphSize'>
           Then I began my journey into the world of technology as a student of{' '}
           <strong>
             Information & Communication Technology (ICT) at Comilla University.
@@ -45,7 +45,7 @@ const About = () => {
           workings of the internet, and began providing services that showcased
           my newfound knowledge.
         </p>
-        <p className='leading-relaxed paragraphSize text-paragraph'>
+        <p className='leading-relaxed text-gray-500 paragraphSize'>
           <strong>
             But it was during my third year of graduation, amidst the COVID-19
             pandemic, that my passion for coding truly ignited.
@@ -59,7 +59,7 @@ const About = () => {
           <strong> MongoDB</strong>. As my skills grew, so did my desire to
           master the art of programming.
         </p>
-        <p className='leading-relaxed paragraphSize text-paragraph'>
+        <p className='leading-relaxed text-gray-500 paragraphSize'>
           <strong>
             Upon realizing that there were still gaps in my knowledge,
             particularly in solving complex programming problems and designing
@@ -75,7 +75,7 @@ const About = () => {
           and <strong>HackerRank</strong>, ultimately solving over{' '}
           <strong>700 problems</strong>, including database-related problems.
         </p>
-        <p className='leading-relaxed paragraphSize text-paragraph'>
+        <p className='leading-relaxed text-gray-500 paragraphSize'>
           But it was my experience providing services that really put my skills
           to the test. Over the years,{' '}
           <strong>
@@ -86,13 +86,13 @@ const About = () => {
           experiences, I honed my problem-solving skills and learned how to work
           with clients to resolve complex issues.
         </p>
-        <p className='leading-relaxed paragraphSize text-paragraph'>
+        <p className='leading-relaxed text-gray-500 paragraphSize'>
           My journey has been one of growth, perseverance, and a relentless
           pursuit of knowledge. I look forward to continuing to challenge
           myself, pushing the limits of what is possible, and contributing my
           skills to the world of software engineering.
         </p>
-        <p className='leading-relaxed paragraphSize text-paragraph'>
+        <p className='leading-relaxed text-gray-500 paragraphSize'>
           If you want to chat, feel free to{' '}
           {
             <Link className='underline' href='/contact'>

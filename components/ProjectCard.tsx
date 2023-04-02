@@ -28,9 +28,9 @@ const ProjectCard = ({
         backgroundColor: '#f1f0f0',
         top: top ? top : '10%',
       }}
-      className='flex px-10 md:px-20 py-10 md:sticky rounded-2xl gap-4 flex-col md:flex-row max-w-4xl mx-auto md:max-h-[80vh] my-10 justify-between shadow-sm border'
+      className='flex px-10 md:pl-20 py-10 md:sticky rounded-2xl gap-4 flex-col md:flex-row max-w-5xl mx-auto md:max-h-[80vh] my-10 justify-between shadow-sm border'
     >
-      <div className='flex flex-col justify-between w-full space-y-4 md:w-2/3 '>
+      <div className='flex flex-col justify-between w-full space-y-4 md:w-1/2 '>
         <h2 className='text-2xl font-medium text-gray-600'>{number}</h2>
         <div className='space-y-3 '>
           <h2 className='inline-block text-gray-500 font-medium text-2xl md:text-3xl tracking-[-1.25px] '>
@@ -52,7 +52,7 @@ const ProjectCard = ({
           ))}
         </ul>
       </div>
-      <div className='w-full md:w-1/3'>
+      <div className='flex items-center justify-center w-full md:w-1/2'>
         <Image width={400} height={400} src={imgUrl} alt={title} />
       </div>
     </div>

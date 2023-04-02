@@ -4,6 +4,8 @@ import Title from './Title';
 import Link from 'next/link';
 import Button from './Button';
 import { ArrowRight } from './Icons';
+import TMMimg from '../assets/tmm.jpg';
+import vehicleTracking from '../assets/vehicleTracking.png';
 
 const works = [
   {
@@ -11,8 +13,7 @@ const works = [
     top: '14%',
     title: 'TMMEmploy',
     subTitle: 'Full stack application',
-    imgUrl:
-      'https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/61019f9f743b67201879170a_Project%20List%20Image%20Frame%20-%20SJ-p-500.png',
+    imgUrl: TMMimg,
     description:
       'A multi-vendor website for The Moving Movers, a hybrid moving company in California, The platform also facilitates the hiring process for employers and job seekers in the moving industry',
     technologies: [
@@ -34,8 +35,7 @@ const works = [
     top: '16%',
     title: 'Real time vehicle tracking system',
     subTitle: 'Full stack application',
-    imgUrl:
-      'https://uploads-ssl.webflow.com/5e1689facb9d5168c0dcbe0b/61019f9f743b67201879170a_Project%20List%20Image%20Frame%20-%20SJ-p-500.png',
+    imgUrl: vehicleTracking,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     technologies: [

@@ -14,6 +14,10 @@ function Home() {
         <meta name='description' content='Software engineer' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
+        <meta
+          name='google-site-verification'
+          content='NkaRsOj5K4MzvK2Yun0otP3LTs6Kyf9KeHgbQ3K1Xf0'
+        />
       </Head>
 
       <div className='flex flex-col'>

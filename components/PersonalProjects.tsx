@@ -31,7 +31,7 @@ const projects = [
 
 const PersonalProjects = () => {
   return (
-    <div className='md:mt-[30px]'>
+    <div className='md:mt-[30px] max-w-[90%] mx-auto'>
       <Title className='md:sticky top-5'>Personal Projects</Title>
       <div>
         {projects.map((work, index) => (

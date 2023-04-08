@@ -6,6 +6,7 @@ import Button from './Button';
 import { ArrowRight } from './Icons';
 import TMMimg from '../assets/tmm.jpg';
 import vehicleTracking from '../assets/vehicleTracking.png';
+import MalwareRemoval from '../assets/MalwareRemoval.png';
 
 const works = [
   {
@@ -23,6 +24,8 @@ const works = [
       'Prisma',
       'Next-auth',
       'pusher',
+      'stripe',
+      'Tailwindcss',
     ],
     Button: (
       <Button href='/'>
@@ -46,10 +49,27 @@ const works = [
       'Redis',
       'IoT sensors',
       'socket.io',
+      'firebase',
     ],
     Button: (
       <Button href='/'>
         View Case Study <ArrowRight />
+      </Button>
+    ),
+  },
+
+  {
+    number: '03',
+    top: '18%',
+    title: 'Website Malware/Virus Removal',
+    subTitle: 'Hacked/Infected Websites',
+    imgUrl: MalwareRemoval,
+    description:
+      'Successfully removed malware/virus from over 800 client sites and more than 2200 websites across 41% of countries worldwide.',
+    technologies: ['Javascript', 'PHP', 'SQL', 'cpanel', 'WordPress'],
+    Button: (
+      <Button disabled={true} href='/'>
+        No Case study <ArrowRight />
       </Button>
     ),
   },

@@ -2,13 +2,36 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 import Title from './Title';
 import snakeImg from '../assets/snakge-game-mdpabel.jpg';
-import Link from 'next/link';
+import wordpresssecurites from '../assets/wordpresssecurities.jpg';
 import Button from './Button';
 import { ArrowUpRight } from './Icons';
 
 const projects = [
   {
     number: '01',
+    top: '10%',
+    title: 'WordPress Securities',
+    subTitle: 'Full stack application',
+    imgUrl: wordpresssecurites,
+    description: `The WordPressSecurities app, backed by a dedicated team of 20-25 experts, offers comprehensive security for blog sites with real-time threat detection, malware scanning, and vulnerability assessments.`,
+    technologies: [
+      'Typescript',
+      'Next.js',
+      'Mongodb',
+      'Prisma',
+      'Clerk Auth',
+      'tailwindcss',
+      'cloudinary',
+      'quilljs',
+    ],
+    Button: (
+      <Button href='https://www.wordpresssecurities.com/'>
+        Live Link <ArrowUpRight />
+      </Button>
+    ),
+  },
+  {
+    number: '02',
     top: '10%',
     title: 'Snake game',
     subTitle: 'Frontend application',

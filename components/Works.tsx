@@ -28,7 +28,7 @@ const works = [
       'Tailwindcss',
     ],
     Button: (
-      <Button href='/'>
+      <Button href='/case-studies/TMMEmploy'>
         View Case Study <ArrowRight />
       </Button>
     ),
@@ -52,7 +52,7 @@ const works = [
       'firebase',
     ],
     Button: (
-      <Button href='/'>
+      <Button href='/case-studies/real-time-vehicle-tracking-system'>
         View Case Study <ArrowRight />
       </Button>
     ),

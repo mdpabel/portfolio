@@ -1,5 +1,4 @@
 import React from 'react';
-import MainLayout from '@/layout/MainLayout';
 import Form from '@/components/Form';
 import {
   FBIcon,
@@ -9,18 +8,11 @@ import {
 } from '@/components/Icons';
 import { EmailIcon } from './../../components/Icons';
 import Link from 'next/link';
-import Head from 'next/head';
 
 const Contact = () => {
   return (
     <>
-      <Head>
-        <title>Contact me</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
-      <div className='max-w-5xl mx-auto '>
+      <div className='max-w-5xl mx-auto pt-12 md:pt-20'>
         <div className='grid grid-cols-1 gap-10 md:grid-cols-2'>
           <div
             style={{
@@ -56,7 +48,5 @@ const Contact = () => {
     </>
   );
 };
-
-Contact.layout = MainLayout;
 
 export default Contact;

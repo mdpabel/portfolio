@@ -1,30 +1,17 @@
 import React from 'react';
-import MainLayout from '@/layout/MainLayout';
 import Link from 'next/link';
-import myImg from '../../assets/me.jpg';
 import Image from 'next/image';
 import Head from 'next/head';
 
 const About = () => {
   return (
     <>
-      <Head>
-        <title>About me</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
       <div className='max-w-6xl px-8 mx-auto'>
         <div className='space-y-4'>
           <div className='flex items-center'>
             <h1 className='inline-block text-transparent bg-clip-text font-bold text-3xl md:text-5xl tracking-[-1.25px] black-gradient py-4'>
               Hi again,
             </h1>
-            <Image
-              width={40}
-              height={40}
-              src='https://em-content.zobj.net/source/noto-emoji-animations/344/waving-hand_1f44b.gif'
-              alt=''
-            />
           </div>
           <p className='leading-relaxed text-gray-500 paragraphSize'>
             As the famous saying goes,{' '}
@@ -116,8 +103,6 @@ const About = () => {
     </>
   );
 };
-
-About.layout = MainLayout;
 
 export default About;
 

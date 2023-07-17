@@ -28,7 +28,7 @@ const ProjectCard = ({
         backgroundColor: '#f1f0f0',
         top: top ? top : '10%',
       }}
-      className='flex px-10 md:pl-20 py-10 md:sticky rounded-2xl gap-4 flex-col md:flex-row max-w-5xl mx-auto md:max-h-[80vh] my-10 justify-between shadow-sm border'
+      className='flex px-8 md:pl-20 py-8 md:sticky rounded-2xl gap-4 flex-col md:flex-row max-w-5xl mx-auto md:max-h-[80vh] my-10 justify-between shadow-sm border'
     >
       <div className='flex flex-col justify-between w-full space-y-4 md:w-1/2 '>
         <h2 className='text-2xl font-medium text-gray-600'>{number}</h2>

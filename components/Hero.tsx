@@ -20,21 +20,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 function Hero() {
-  const [translateX, setTranslateX] = useState(0);
-  const [translateY, setTranslateY] = useState(0);
-
-  const handleMouseMove = (event: React.MouseEvent) => {
-    const { clientX, clientY } = event;
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
-    const deltaX = clientX - centerX;
-    const deltaY = clientY - centerY;
-    const translateX = deltaX * 0.05;
-    const translateY = deltaY * 0.05;
-    setTranslateX(translateX);
-    setTranslateY(translateY);
-  };
-
   return (
     <>
       <Head>

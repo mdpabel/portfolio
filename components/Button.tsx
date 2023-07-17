@@ -15,6 +15,7 @@ const Button = ({
   return (
     <div>
       <Link
+        target='_blank'
         href={href}
         className={
           `px-4 py-2 text-sm rounded-md shadow bg-slate-50 text-paragraph ` +

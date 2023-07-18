@@ -39,8 +39,8 @@ function Hero() {
         </div>
         <div className='flex justify-center w-full'>
           <div className='max-w-lg mx-8 space-x-2 paragraphSize md:mx-auto text-paragraph'>
-            I&#x27;m a recent computer science graduate and I&#x27;m excited to
-            pursue my passion for creating engaging digital experiences.
+            Computer Science Graduate, Software developer, Problem solver,
+            passionate about creating experiences. Skilled in malware detection
             <AcademicCap />
           </div>
         </div>

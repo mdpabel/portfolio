@@ -13,7 +13,7 @@ const projects = [
     title: 'WordPress Securities',
     subTitle: 'Full stack application',
     imgUrl: wordpresssecurites,
-    description: `The WordPressSecurities app, backed by a dedicated team of 20-25 experts, offers comprehensive security for blog sites with real-time threat detection, malware scanning, and vulnerability assessments.`,
+    description: `WordPressSecurities.com presents the ultimate app for robust WordPress security. The app is dedicated to providing top-notch protection and is developed by a team collective of 20-25 highly skilled WordPress professionals with extensive experience in website security and malware removal.`,
     technologies: [
       'Typescript',
       'Next.js',

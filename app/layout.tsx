@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: 'MD Pabel - Software Developer',
   description:
     'Software developer and problem solver with a passion for building innovative solutions.',
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({

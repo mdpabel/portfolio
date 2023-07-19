@@ -77,7 +77,7 @@ const works = [
 
 const Works = () => {
   return (
-    <div className='mt-32 md:mt-[150px]  max-w-[90%] mx-auto'>
+    <div className='mt-32 md:mt-[120px]  max-w-[90%] mx-auto'>
       <Title className='md:sticky top-2'>Works</Title>
       <div className='flex flex-col '>
         {works.map((work, index) => (

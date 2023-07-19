@@ -115,7 +115,7 @@ const Skill = ({
 
 const Skills = () => {
   return (
-    <div className='relative flex flex-col items-center justify-center w-full max-w-6xl px-8 pt-5 mx-auto mt-10 md:mt-28'>
+    <div className='relative flex flex-col items-center justify-center w-full max-w-6xl px-8 pt-5 mx-auto mt-10 md:mt-15'>
       <Title>My skills</Title>
 
       {/* start  */}

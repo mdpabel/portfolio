@@ -25,7 +25,7 @@ const Header = () => {
           <li className=''>
             <Link
               className='flex items-center py-2 shadow-lg px-7 bg-slate-50 rounded-3xl '
-              href='https://drive.google.com/file/d/1VOu63qIwQZAcUsyBAXbtEaQyFGOVqmj9/view?usp=share_link'
+              href='https://drive.google.com/file/d/131tsRRbxVAaWLG7RgEFH8ZEyEcptcDMl/view?usp=drive_link'
               target='_blank'
             >
               My CV <ArrowUpRight />

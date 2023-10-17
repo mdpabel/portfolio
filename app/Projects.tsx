@@ -12,7 +12,7 @@ const projects = [
     title: "WordPress Securities",
     subTitle: "Full stack application",
     imgUrl: "/wordpresssecurities.jpg",
-    description: `WordPressSecurities.com presents the ultimate app for robust WordPress security. The app is dedicated to providing top-notch protection and is developed by a team collective of 20-25 highly skilled WordPress professionals with extensive experience in website security and malware removal.`,
+    description: `WordPressSecurities.com is dedicated to providing top-notch WordPress Security and Malware removal services.`,
     technologies: [
       "Typescript",
       "Next.js",
@@ -21,7 +21,12 @@ const projects = [
       "Clerk Auth",
       "tailwindcss",
       "cloudinary",
-      "quilljs",
+      "zustand",
+      "stripe",
+      "pusher",
+      "shadcn/ui",
+      "headless wordpress",
+      "contentful",
     ],
     liveLink: "https://www.wordpresssecurities.com/",
     github: "https://github.com/mdpabel/WordPressSecurities",
@@ -33,7 +38,7 @@ const projects = [
     subTitle: "Full stack application",
     imgUrl: "/vehicleTracking.png",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Real-time Vehicle Tracking is a fullstack application that enables users to track the real-time location of vehicles. ",
     technologies: [
       "Javascript",
       "NodeJs",

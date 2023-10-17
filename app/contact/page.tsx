@@ -8,6 +8,8 @@ import {
   EmailIcon,
 } from "@/components/icons";
 
+export const dynamic = "force-static";
+
 const Contact = () => {
   return (
     <>

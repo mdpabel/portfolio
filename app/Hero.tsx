@@ -1,22 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
 import {
   AcademicCap,
-  CalculatorIcon,
-  ChipIcon,
-  CodeBracket,
-  CodeForces,
-  ComputerIcon,
   CVIcon,
-  DBIcon,
   GithubIcon,
   HackerRank,
   LeetCodeIcon,
   LocationIcon,
-  ServerIcon,
 } from "@/components/icons";
-import cvIcon from "../assets/cvicon.png";
-import { useState } from "react";
 import Link from "next/link";
 
 function Hero() {

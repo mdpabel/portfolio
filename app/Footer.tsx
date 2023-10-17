@@ -1,6 +1,6 @@
+import { EmailIcon, FBIcon, PhoneIcon, TwitterIcon } from "@/components/icons";
 import Link from "next/link";
 import React from "react";
-import { EmailIcon, FBIcon, PhoneIcon, TwitterIcon } from "../components/icons";
 
 const Footer = () => {
   return (

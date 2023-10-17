@@ -1,9 +1,9 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import { ArrowRight, ArrowUpRight, GithubIcon } from "../components/icons";
 import Title from "@/components/Title";
 import { Button } from "@/components/Button";
 import Link from "next/link";
+import { ArrowUpRight } from "@/components/icons";
 
 const projects = [
   {

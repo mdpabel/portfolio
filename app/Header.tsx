@@ -1,6 +1,6 @@
-import { ArrowUpRight } from "@/components/icons";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
+import { ArrowUpRight } from "@/components/icons";
 
 const Header = () => {
   return (

@@ -3,6 +3,8 @@ import Hero from "./Hero";
 import Projects from "./Projects";
 import Skills from "./Skills";
 
+export const dynamic = "force-static";
+
 export default function Home() {
   return (
     <div className="flex flex-col pt-12 md:pt-20">

@@ -6,7 +6,7 @@ import {
   PhoneIcon,
   TwitterIcon,
   EmailIcon,
-} from "@/components/icons";
+} from "@/components/Icons";
 
 export const dynamic = "force-static";
 

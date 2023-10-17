@@ -1,4 +1,4 @@
-import { EmailIcon, FBIcon, PhoneIcon, TwitterIcon } from "@/components/icons";
+import { EmailIcon, FBIcon, PhoneIcon, TwitterIcon } from "@/components/Icons";
 import Link from "next/link";
 import React from "react";
 

@@ -5,7 +5,7 @@ import {
   HackerRank,
   LeetCodeIcon,
   LocationIcon,
-} from "@/components/icons";
+} from "@/components/Icons";
 import Link from "next/link";
 
 function Hero() {

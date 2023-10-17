@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import Title from "@/components/Title";
 import { Button } from "@/components/Button";
 import Link from "next/link";
-import { ArrowUpRight } from "@/components/icons";
+import { ArrowUpRight } from "@/components/Icons";
 
 const projects = [
   {

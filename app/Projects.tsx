@@ -135,12 +135,12 @@ const ProjectCard = ({
           </p>
           <div className="space-x-4">
             <Button asChild>
-              <Link href={liveLink}>
+              <Link target="_blank" href={liveLink}>
                 Live Link <ArrowUpRight />
               </Link>
             </Button>
             <Button asChild>
-              <Link href={github}>
+              <Link target="_blank" href={github}>
                 Github <ArrowUpRight />
               </Link>
             </Button>

@@ -13,7 +13,6 @@ const MobileMenu = () => {
         setOpen(false);
       }
     };
-
     document.addEventListener("click", event, true);
 
     return () => document.removeEventListener("click", event, true);

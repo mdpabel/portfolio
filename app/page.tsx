@@ -1,16 +1,15 @@
-import Hero from '@/components/Hero';
-import PersonalProjects from '@/components/PersonalProjects';
-import Skills from '@/components/Skills';
-import Works from '@/components/Works';
-import Image from 'next/image';
+import Experience from "./Experience";
+import Hero from "./Hero";
+import Projects from "./Projects";
+import Skills from "./Skills";
 
 export default function Home() {
   return (
-    <div className='flex flex-col pt-12 md:pt-20'>
+    <div className="flex flex-col pt-12 md:pt-20">
       <Hero />
       <Skills />
-      <Works />
-      <PersonalProjects />
+      <Experience />
+      <Projects />
     </div>
   );
 }

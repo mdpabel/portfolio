@@ -24,7 +24,7 @@ const projects = [
       "quilljs",
     ],
     liveLink: "https://www.wordpresssecurities.com/",
-    github: "https://www.wordpresssecurities.com/",
+    github: "https://github.com/mdpabel/WordPressSecurities",
   },
   {
     number: "02",
@@ -45,7 +45,7 @@ const projects = [
       "firebase",
     ],
     liveLink: "https://github.com/mdpabel/Real-time-Vehicle-Tracking",
-    github: "https://www.wordpresssecurities.com/",
+    github: "https://github.com/mdpabel/Real-time-Vehicle-Tracking",
   },
   {
     number: "03",
@@ -62,7 +62,7 @@ const projects = [
       "tailwindcss",
     ],
     liveLink: "https://snake-game-pi-amber.vercel.app/",
-    github: "https://www.wordpresssecurities.com/",
+    github: "https://github.com/mdpabel/snake-game",
   },
 ];
 

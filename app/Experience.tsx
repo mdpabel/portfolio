@@ -16,15 +16,19 @@ const Experience = () => {
         </div>
         <ul className="list-disc list-inside">
           <li>
-            Worked on contract and freelance basis, fixed over 2200 websites.
+            Worked on contract and freelance basis,{" "}
+            <strong className="text-gray-600">fixed over 2200 websites</strong>.
           </li>
           <li>
             Analyze malware samples and determine the nature and severity of
             threats to client websites.
           </li>
           <li>
-            Successfully removed malware from over 1200 client sites across 43%
-            of countries worldwide, minimizing the impact of the attacks.
+            Successfully removed malware from over{" "}
+            <strong className="text-gray-600">
+              1200 client sites across 43% of countries worldwide
+            </strong>
+            , minimizing the impact of the attacks.
           </li>
         </ul>
       </div>

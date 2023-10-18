@@ -74,7 +74,7 @@ const projects = [
 const Projects = () => {
   return (
     <div className="md:mt-[30px]">
-      <Title className="md:sticky top-5">Personal Projects</Title>
+      <Title className="md:sticky top-5 mt-10">Personal Projects</Title>
       <div>
         {projects.map((work, index) => (
           <ProjectCard
@@ -124,7 +124,7 @@ const ProjectCard = ({
         top: top ? top : "10%",
         zIndex: parseInt(number) * 10,
       }}
-      className="bg-white/50 px-8 backdrop-blur-3xl flex md:pl-20 py-8 md:sticky rounded-2xl gap-4 flex-col md:flex-row max-w-5xl mx-auto md:max-h-[80vh] my-10 justify-between shadow-sm border"
+      className="bg-white/50 px-6 md:px-8 backdrop-blur-3xl flex md:pl-20 py-6 md:py-8 md:sticky rounded-2xl gap-4 flex-col md:flex-row max-w-5xl mx-auto md:max-h-[80vh] my-10 justify-between shadow-sm border"
     >
       <div className="flex flex-col justify-between w-full space-y-4 md:w-1/2 ">
         <h2 className="text-2xl font-medium text-gray-600">{number}</h2>
@@ -138,7 +138,7 @@ const ProjectCard = ({
           <p className="text-base leading-normal text-paragraph">
             {description}
           </p>
-          <div className="space-x-4">
+          <div className="space-x-3 md:space-x-4">
             <Button asChild>
               <Link target="_blank" href={liveLink}>
                 Live Link <ArrowUpRight />

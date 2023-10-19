@@ -1,7 +1,7 @@
 import React from "react";
 import { Resend } from "resend";
 import { EmailTemplate } from "./EmailTemplate";
-import FormSubmitionButton from "./FormSubmitionButton";
+import FormSubmissionButton from "./FormSubmissionButton";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -75,7 +75,7 @@ const Form = () => {
         />
       </div>
 
-      <FormSubmitionButton />
+      <FormSubmissionButton />
     </form>
   );
 };

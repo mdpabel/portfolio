@@ -4,7 +4,7 @@ import Spinner from "@/components/Spinner";
 import React from "react";
 import { experimental_useFormStatus as useFormStatus } from "react-dom";
 
-const FormSubmitionButton = () => {
+const FormSubmissionButton = () => {
   const { pending } = useFormStatus();
 
   return (
@@ -17,4 +17,4 @@ const FormSubmitionButton = () => {
   );
 };
 
-export default FormSubmitionButton;
+export default FormSubmissionButton;

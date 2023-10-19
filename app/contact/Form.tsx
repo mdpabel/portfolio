@@ -12,6 +12,12 @@ const Form = () => {
       const email = formData.get("email") as string;
       const message = formData.get("message") as string;
       const subject = formData.get("subject") as string;
+      const nameConfirm = formData.get("name__confirm") as string;
+
+      if (nameConfirm.length > 0) {
+        console.log(email);
+        return;
+      }
 
       const emailOptions = {
         from: "From mdpabel.com <onboarding@resend.dev>",
@@ -30,7 +36,7 @@ const Form = () => {
   };
 
   return (
-    <form action={handleFormSubmission} className="px-10 space-y-4">
+    <form action={handleFormSubmission} className="px-4 md:px-10 space-y-4">
       <div>
         <input
           type="email"
@@ -57,6 +63,18 @@ const Form = () => {
           placeholder="Leave a comment..."
         ></textarea>
       </div>
+
+      <div className="hidden">
+        <input
+          autoComplete="off"
+          placeholder="do not fill this"
+          type="text"
+          name="name__confirm"
+          id="name__confirm"
+          tabIndex={-1}
+        />
+      </div>
+
       <FormSubmitionButton />
     </form>
   );

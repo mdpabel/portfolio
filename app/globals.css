@@ -60,3 +60,11 @@ input[type='radio']:checked+label {
 .bar-top {
   background-color: #a6a6a6;
 }
+
+
+@layer base {
+  :root {
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+  }
+}

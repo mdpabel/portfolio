@@ -1,5 +1,4 @@
 import React from "react";
-import Form from "./Form";
 import {
   FBIcon,
   LocationIcon,
@@ -7,6 +6,7 @@ import {
   TwitterIcon,
   EmailIcon,
 } from "@/components/Icons";
+import ContactForm from "./ContactForm";
 
 export const dynamic = "force-static";
 
@@ -37,7 +37,7 @@ const Contact = () => {
             </div>
           </div>
           <div>
-            <Form />
+            <ContactForm />
           </div>
         </div>
       </div>

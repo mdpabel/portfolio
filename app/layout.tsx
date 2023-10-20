@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./Header";
 import Footer from "./Footer";
+import { Toaster } from "@/components/Toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} bg-white/75 px-4 md:px-8 max-w-6xl mx-auto`}
-      >
+      <body className={`${inter.className} bg-white/75 px-6 max-w-6xl mx-auto`}>
         <Header />
         <main className="min-h-[80vh]">{children}</main>
+        <Toaster />
         <Footer />
       </body>
     </html>

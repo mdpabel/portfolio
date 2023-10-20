@@ -14,7 +14,7 @@ const Experience = () => {
             Jul 2018 - Present
           </span>
         </div>
-        <ul className="list-disc list-inside">
+        <ul className="list-disc list-inside space-y-1">
           <li>
             Worked on contract and freelance basis,{" "}
             <strong className="text-gray-600">fixed over 2200 websites</strong>.

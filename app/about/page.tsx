@@ -1,11 +1,54 @@
 import React from "react";
 import Link from "next/link";
 
-export const dynamic = "force-static";
+const apiEndpoint = "https://leetcode.com/graphql";
 
-const About = () => {
+const query = `
+  query getUserProfile($username: String!) {
+    matchedUser(username: $username) {
+      username
+      submitStats: submitStatsGlobal {
+        acSubmissionNum {
+          difficulty
+          count
+          submissions
+        }
+      }
+    }
+  }
+`;
+
+const variables = {
+  username: "mdpabel", // Replace with the desired username
+};
+
+const fetchLeetcodeProfile = async () => {
+  try {
+    const response = await fetch(apiEndpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query,
+        variables,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log(data?.data?.matchedUser?.submitStats);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+};
+
+const About = async () => {
   return (
-    <div className="space-y-4 max-w-5xl mx-auto">
+    <div className="space-y-4 mx-auto">
       <div className="flex items-center">
         <h1 className="inline-block text-transparent bg-clip-text font-bold text-3xl md:text-5xl tracking-[-1.25px] black-gradient py-4">
           Hi again,

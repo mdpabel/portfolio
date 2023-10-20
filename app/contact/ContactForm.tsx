@@ -76,7 +76,7 @@ const ContactForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="name@mdpabel.com" {...field} />
+                <Input autoFocus placeholder="name@mdpabel.com" {...field} />
               </FormControl>
               <FormMessage className="text-red-500" />
             </FormItem>

@@ -28,7 +28,7 @@ function Hero() {
           <AcademicCap />
         </div>
       </div>
-      <div className="flex gap-6 pt-10">
+      <div className="flex space-x-4 md:space-x-6 pt-10">
         <Link
           aria-label="leetcode profile"
           target="_blank"

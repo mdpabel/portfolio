@@ -6,7 +6,7 @@ import {
   HackerRank,
   LeetCodeIcon,
   LocationIcon,
-  ReplIt,
+  ReplItIcon,
   StackblitzIcon,
 } from "@/components/Icons";
 import Link from "next/link";
@@ -69,7 +69,7 @@ function Hero() {
           target="_blank"
           href="https://replit.com/@MDPabel?tab=repls"
         >
-          <ReplIt />
+          <ReplItIcon />
         </Link>
         <Link
           aria-label="Open Resume"

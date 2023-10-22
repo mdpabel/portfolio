@@ -534,3 +534,39 @@ export const Cross2Icon = () => (
     ></path>
   </svg>
 );
+
+export const StackblitzIcon = ({ className = "" }: { className?: string }) => (
+  <svg
+    className={`w-6 h-6 ` + className}
+    viewBox="0 0 28 28"
+    aria-hidden="true"
+    height="24"
+    width="24"
+  >
+    <path d="M12.747 16.273h-7.46L18.925 1.5l-3.671 10.227h7.46L9.075 26.5l3.671-10.227z"></path>
+  </svg>
+);
+
+export const ReplIt = () => (
+  <svg
+    className={`w-6 h-6 `}
+    height="24"
+    width="24"
+    viewBox="0 0 28 28"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M10 11.5C10 10.6716 10.6716 10 11.5 10H18.5C19.3284 10 20 10.6716 20 11.5V18H11.5C10.6716 18 10 17.3284 10 16.5V11.5Z"
+      fill="#F26207"
+    ></path>
+    <path
+      d="M20 18H28.5C29.3284 18 30 18.6716 30 19.5V24.5C30 25.3284 29.3284 26 28.5 26H20V18Z"
+      fill="#F26207"
+    ></path>
+    <path
+      d="M10 27.5C10 26.6716 10.6716 26 11.5 26H20V32.5C20 33.3284 19.3284 34 18.5 34H11.5C10.6716 34 10 33.3284 10 32.5V27.5Z"
+      fill="#F26207"
+    ></path>
+  </svg>
+);

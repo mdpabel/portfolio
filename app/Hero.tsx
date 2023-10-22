@@ -1,10 +1,13 @@
 import {
   AcademicCap,
   CVIcon,
+  CodeForces,
   GithubIcon,
   HackerRank,
   LeetCodeIcon,
   LocationIcon,
+  ReplIt,
+  StackblitzIcon,
 } from "@/components/Icons";
 import Link from "next/link";
 
@@ -47,9 +50,27 @@ function Hero() {
         >
           <HackerRank />
         </Link>
-        {/* <Link target='_blank' href='https://codeforces.com/profile/MD_Pabel'>
-            <CodeForces />
-          </Link> */}
+        <Link
+          aria-label="codeforces profile"
+          target="_blank"
+          href="https://codeforces.com/profile/MD_Pabel"
+        >
+          <CodeForces />
+        </Link>
+        <Link
+          aria-label="stackblitz profile"
+          target="_blank"
+          href="https://stackblitz.com/@mdpabel"
+        >
+          <StackblitzIcon />
+        </Link>
+        <Link
+          aria-label="codeforces profile"
+          target="_blank"
+          href="https://replit.com/@MDPabel?tab=repls"
+        >
+          <ReplIt />
+        </Link>
         <Link
           aria-label="Open Resume"
           target="_blank"

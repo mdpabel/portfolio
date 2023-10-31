@@ -18,7 +18,6 @@ export const navItems = [
 
 const Header = () => {
   const pathName = usePathname();
-
   return (
     <header className='relative flex items-center justify-between h-16 max-w-6xl mx-auto mt-10'>
       <div className='text-2xl text-gray-600'>

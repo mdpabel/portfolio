@@ -47,10 +47,7 @@ const MobileMenu = () => {
               className='border-b'>
               <Link
                 href={item.path}
-                className={cn(
-                  'block py-2 pl-3 pr-4 text-gray-700 rounded ',
-                  pathName === item.path && 'font-bold',
-                )}
+                className={cn('block py-2 pl-3 pr-4 text-gray-700 rounded ')}
                 aria-current='page'>
                 {item.label}
               </Link>

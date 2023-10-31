@@ -2,7 +2,11 @@
 
 Welcome to my portfolio website built using Next.js and TypeScript. This website showcases my projects and provides information about me.
 
-![Portfolio Website Screenshot](/screenshot.jpg)
+### Live url: https://mdpabel.com
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="screenshot.jpg" alt="Portfolio Website Screenshot">
+</div>
 
 ## Features
 

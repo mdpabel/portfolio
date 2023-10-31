@@ -76,7 +76,6 @@ function Hero() {
           target="_blank"
           href="https://drive.google.com/file/d/1A6I4qF3WBwlKskaAT23G5volEAJ-9i4T/view"
         >
-          {/* <Image src={cvIcon} alt='CV Icon' width={24} height={24} /> */}
           <CVIcon />
         </Link>
       </div>

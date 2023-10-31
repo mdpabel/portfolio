@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import { navItems } from './Header';
 import { cn } from '@/lib/utils';
 
-const MobileMenu = ({ pathName }: { pathName: string }) => {
+const MobileMenu = () => {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 

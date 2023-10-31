@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import MobileMenu from './MobileMenu';
 import { ArrowUpRight } from '@/components/Icons';
@@ -17,7 +16,6 @@ export const navItems = [
 ];
 
 const Header = () => {
-  const pathName = usePathname();
   return (
     <header className='relative flex items-center justify-between h-16 max-w-6xl mx-auto mt-10'>
       <div className='text-2xl text-gray-600'>
@@ -29,12 +27,7 @@ const Header = () => {
         <ul className='items-center hidden space-x-6 text-gray-600 md:flex'>
           {navItems.map((item) => (
             <li key={item.label}>
-              <Link
-                className={cn(
-                  'font-medium',
-                  pathName === item.path && 'font-bold',
-                )}
-                href={item.path}>
+              <Link className={cn('font-medium')} href={item.path}>
                 {item.label}
               </Link>
             </li>
@@ -50,7 +43,7 @@ const Header = () => {
           </li>
         </ul>
         {/* MOBILE NAVBAR  */}
-        <MobileMenu pathName={pathName} />
+        <MobileMenu />
       </nav>
     </header>
   );

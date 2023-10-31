@@ -7,10 +7,6 @@ import { cn } from '@/lib/utils';
 
 export const navItems = [
   {
-    label: 'Home',
-    path: '/',
-  },
-  {
     label: 'About',
     path: '/about',
   },

@@ -1,143 +1,131 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import Title from '@/components/Title';
+import WorldDominance from './WorldDominance';
+import {
+  lastUpdate,
+  totalClients,
+  totalProjects,
+  totalWebsiteFixes,
+  worldDominaation,
+} from './data';
+import Skills from '../Skills';
 
-const apiEndpoint = "https://leetcode.com/graphql";
+export const dynamic = 'force-static';
 
-const query = `
-  query getUserProfile($username: String!) {
-    matchedUser(username: $username) {
-      username
-      submitStats: submitStatsGlobal {
-        acSubmissionNum {
-          difficulty
-          count
-          submissions
-        }
-      }
-    }
-  }
-`;
-
-const variables = {
-  username: "mdpabel", // Replace with the desired username
-};
-
-const fetchLeetcodeProfile = async () => {
-  try {
-    const response = await fetch(apiEndpoint, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query,
-        variables,
-      }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Request failed with status ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log(data?.data?.matchedUser?.submitStats);
-  } catch (error) {
-    console.error("Error:", error);
-  }
-};
+function calculateYearsSince(startDate: Date): number {
+  const currentDate = new Date();
+  const timeDiff = currentDate.getTime() - startDate.getTime();
+  const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25;
+  const years = timeDiff / millisecondsInYear;
+  return Math.floor(years) + (years % 1 >= 0.5 ? 0.5 : 0);
+}
 
 const About = async () => {
+  const coding = calculateYearsSince(new Date(2019, 0, 12));
+  const experience = calculateYearsSince(new Date(2018, 0, 7));
+
   return (
-    <div className="space-y-4 mx-auto">
-      <div className="flex items-center">
-        <h1 className="inline-block text-transparent bg-clip-text font-bold text-3xl md:text-5xl tracking-[-1.25px] black-gradient py-4">
-          Hi again,
-        </h1>
+    <div className='space-y-4 max-w-4xl mx-auto py-2 md:py-6'>
+      <Image src='/me_2.jpg' width={1600} height={1000} alt='MD Pabel' />
+      <div className='max-w-3xl mx-auto space-y-10'>
+        <div className='space-y-4'>
+          <h2 className='text-2xl font-semibold text-gray-800'>About</h2>
+          <div className='space-y-3 leading-relaxed'>
+            <p>
+              Hello, I&apos;m <strong className='font-medium'>MD Pabel.</strong>
+            </p>
+            <p>
+              My journey began in a remote corner of Bangladesh, and it&apos;s
+              been a remarkable one. I&apos;m deeply committed to the world of
+              technology, with a focus on programming and web scurity I&apos;ve
+              honed my skills to solve real-world problems, particularly in
+              cleansing websites from malware and safeguarding online spaces.
+            </p>
+            <p>
+              I&apos;m dedicated to mastering technology, solving real problems,
+              and making a positive impact. I&apos;m excited to keep learning
+              and pushing boundaries in the tech world.
+            </p>
+          </div>
+        </div>
+
+        <div className='space-y-4'>
+          <h2 className='text-2xl font-semibold text-gray-800'>Skills</h2>
+          <p>
+            Let&apos;s have some fun with numbers from my tech journey. These
+            stats don&apos;t hold any deep meaning, but they reflect my tech
+            adventure, and you&apos;re welcome to draw your insights from them.
+          </p>
+        </div>
+
+        <div className='space-y-4'>
+          <h2 className='text-2xl font-semibold text-gray-800'>Coding</h2>
+          <ul className='grid md:grid-cols-2 gap-y-2 gap-x-8'>
+            <ListItem leftText='Years Coding' rightText={coding} />
+            <ListItem leftText='Developed Websites' rightText='10+' />
+            <ListItem leftText='DS/Algo Problems Solved' rightText='700+' />
+            <ListItem leftText='Database Problems Solved' rightText='100+' />
+            <ListItem leftText='Languages Spoken' rightText='4' />
+          </ul>
+
+          <div className='flex justify-center pt-4'>
+            <Image
+              width={500}
+              height={300}
+              alt='Leetcode MD Pabel'
+              src='https://leetcard.jacoblin.cool/mdpabel?theme=light&font=Karma'
+            />
+          </div>
+        </div>
+
+        <div className='space-y-4'>
+          <h2 className='text-2xl font-semibold text-gray-800'>
+            Real World Experience
+            <sup className='text-sm ml-4 text-gray-600'>
+              Last updated: {lastUpdate}
+            </sup>
+          </h2>
+          <ul className='grid md:grid-cols-2 gap-y-3 gap-x-8'>
+            <ListItem
+              leftText='Real World Experience'
+              rightText={'' + experience + '+'}
+            />
+            <ListItem leftText='Project Success' rightText={totalProjects} />
+            <ListItem
+              leftText='Hacked Website Fixes'
+              rightText={totalWebsiteFixes + '+'}
+            />
+            <ListItem leftText='Clients' rightText={totalClients + '+'} />
+            <ListItem
+              leftText='Global Impact'
+              rightText={worldDominaation + '%'}
+            />
+            <ListItem leftText='Websites Launched' rightText='10+' />
+          </ul>
+
+          <WorldDominance />
+        </div>
+
+        <Skills title='Languages & Frameworks' />
       </div>
-      <p className="leading-relaxed text-gray-500 paragraphSize">
-        As the famous saying goes,{" "}
-        <strong>
-          &ldquo;We grow old too soon and get smart too late,&ldquo;
-        </strong>{" "}
-        and this rings true for me as I reflect on my childhood. I grew up in a
-        remote area of Bangladesh, where modern technology like televisions,
-        computers, and the internet were not accessible. Despite this, I found
-        joy in playing traditional Bengali games and exploring the natural
-        beauty of my surroundings. However, this lack of exposure also meant
-        that there were many things I didn&apos;t learn until later in life. I
-        eventually learned these things the hard way, very late in my life.
-      </p>
-      <p className="leading-relaxed text-gray-500 paragraphSize">
-        Then I began my journey into the world of technology as a student of{" "}
-        <strong>
-          Information & Communication Technology (ICT) at Comilla University.
-        </strong>{" "}
-        It was here that I discovered my passion for exploring the vast
-        possibilities that the internet and modern technologies had to offer.
-        During my first two years of graduation, I spent countless hours with my
-        friends, immersing myself in the intricacies of the digital world. I
-        learned the fundamentals of programming, delved into the inner workings
-        of the internet, and began providing services that showcased my newfound
-        knowledge.
-      </p>
-      <p className="leading-relaxed text-gray-500 paragraphSize">
-        <strong>
-          But it was during my third year of graduation, amidst the COVID-19
-          pandemic, that my passion for coding truly ignited.
-        </strong>{" "}
-        I spent endless hours in front of my computer, learning{" "}
-        <strong>Javascript</strong>,<strong>Typescript</strong> and popular
-        frameworks like <strong>ReactJS</strong>, <strong>NextJS</strong>,{" "}
-        <strong>NodeJS</strong>, and
-        <strong> ExpressJS</strong>. I also delved into database management with{" "}
-        <strong>SQL</strong> and
-        <strong> MongoDB</strong>. As my skills grew, so did my desire to master
-        the art of programming.
-      </p>
-      <p className="leading-relaxed text-gray-500 paragraphSize">
-        <strong>
-          Upon realizing that there were still gaps in my knowledge,
-          particularly in solving complex programming problems and designing
-          complex solutions
-        </strong>
-        , I decided to take action. I initially tried learning C++ and continued
-        to solve problems using this language. However, I eventually found that
-        my true passion lay in using Python. I
-        <strong>migrated to Python and have been solving problems</strong> with
-        it ever since. To further improve my skills, I entered on a journey to
-        master <strong>data structures and algorithms</strong>. I tackled
-        numerous problems on popular coding platforms such as{" "}
-        <strong>LeetCode</strong> and <strong>HackerRank</strong>, ultimately
-        solving over <strong>700 problems</strong>, including database-related
-        problems.
-      </p>
-      <p className="leading-relaxed text-gray-500 paragraphSize">
-        But it was my experience providing services that really put my skills to
-        the test. Over the years,{" "}
-        <strong>
-          I successfully removed malware/virus from over 800 client sites and
-          more than 2200 websites across 41% of countries worldwide
-        </strong>
-        , minimizing the impact of these vicious attacks. Through these
-        experiences, I honed my problem-solving skills and learned how to work
-        with clients to resolve complex issues.
-      </p>
-      <p className="leading-relaxed text-gray-500 paragraphSize">
-        My journey has been one of growth, perseverance, and a relentless
-        pursuit of knowledge. I look forward to continuing to challenge myself,
-        pushing the limits of what is possible, and contributing my skills to
-        the world of software engineering.
-      </p>
-      <p className="leading-relaxed text-gray-500 paragraphSize">
-        If you want to chat, feel free to{" "}
-        {
-          <Link className="underline" href="/contact">
-            reach out
-          </Link>
-        }
-        .
-      </p>
     </div>
+  );
+};
+
+const ListItem = ({
+  leftText,
+  rightText,
+}: {
+  leftText: string;
+  rightText: string | number;
+}) => {
+  return (
+    <li className='flex justify-between'>
+      <span className='text-gray-800'>{leftText}</span>
+      <span className='bg-slate-200 px-3 rounded-full'>{rightText}</span>
+    </li>
   );
 };
 

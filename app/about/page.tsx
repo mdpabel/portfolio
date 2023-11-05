@@ -1,7 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import Title from '@/components/Title';
 import WorldDominance from './WorldDominance';
 import {
   lastUpdate,
@@ -11,6 +9,7 @@ import {
   worldDominaation,
 } from './data';
 import Skills from '../Skills';
+import MyImg from '@/public/me_2.jpg';
 
 export const dynamic = 'force-static';
 
@@ -28,7 +27,7 @@ const About = async () => {
 
   return (
     <div className='space-y-4 max-w-4xl mx-auto py-2 md:py-6'>
-      <Image src='/me_2.jpg' width={1200} height={800} alt='MD Pabel' />
+      <Image src={MyImg} alt='MD Pabel' />
       <div className='max-w-3xl mx-auto space-y-10'>
         <div className='space-y-4'>
           <h2 className='text-2xl font-semibold text-gray-800'>About</h2>

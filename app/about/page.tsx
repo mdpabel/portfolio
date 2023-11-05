@@ -27,7 +27,7 @@ const About = async () => {
 
   return (
     <div className='space-y-4 max-w-4xl mx-auto py-2 md:py-6'>
-      <Image src={MyImg} alt='MD Pabel' />
+      <Image priority src={MyImg} alt='MD Pabel' />
       <div className='max-w-3xl mx-auto space-y-10'>
         <div className='space-y-4'>
           <h2 className='text-2xl font-semibold text-gray-800'>About</h2>

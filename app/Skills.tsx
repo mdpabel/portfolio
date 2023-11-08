@@ -9,10 +9,30 @@ const skillsArray = [
   },
   {
     label: 'Typescript',
-    level: '180px',
+    level: '200px',
+  },
+  {
+    label: 'Python',
+    level: '165px',
+  },
+  {
+    label: 'Node.js',
+    level: '165px',
+  },
+  {
+    label: 'SQL',
+    level: '165px',
+  },
+  {
+    label: 'Mongodb',
+    level: '145px',
   },
   {
     label: 'React',
+    level: '190px',
+  },
+  {
+    label: 'Next.js',
     level: '190px',
   },
   {
@@ -20,32 +40,11 @@ const skillsArray = [
     level: '140px',
   },
   {
-    label: 'Node.js',
-    level: '165px',
-  },
-  {
-    label: 'Next.js',
-    level: '190px',
-  },
-
-  {
-    label: 'SQL',
-    level: '165px',
-  },
-  {
-    label: 'Git, Github',
-    level: '145px',
-  },
-  {
     label: 'Express.js',
     level: '165px',
   },
   {
-    label: 'Python',
-    level: '165px',
-  },
-  {
-    label: 'Mongodb',
+    label: 'Git, Github',
     level: '145px',
   },
   {
@@ -118,40 +117,40 @@ const Skills = ({ title }: { title: string }) => {
       {/* start  */}
       <div className='relative block w-full lg:hidden'>
         <ul className='flex w-full'>
-          <li className='h-[580px] w-1/5 text-center relative'>
+          <li className='h-[580px] w-1/4 text-center relative'>
             <div className='h-8 mt-4 text-sm'>
               <strong>Uh? </strong>
             </div>
             <div className='absolute w-[1px] h-full bg-gray-300 left-0'></div>
           </li>
 
-          <li className='h-[580px] w-1/5 text-center relative'>
+          <li className='h-[580px] w-1/4 text-center relative'>
             <div className='h-8 mt-4 text-sm'>
               <strong>Basic</strong>
             </div>
             <div className='absolute w-[1px] h-full bg-gray-300 left-0'></div>
           </li>
 
-          <li className='h-[580px] w-1/5 text-center relative'>
+          <li className='h-[580px] w-1/4 text-center relative'>
             <div className='h-8 mt-4 text-sm'>
               <strong className='pr-4'>Medium</strong>
             </div>
             <div className='absolute w-[1px] h-full bg-gray-300 left-0'></div>
           </li>
 
-          <li className='h-[580px] w-1/5 text-center relative'>
+          <li className='h-[580px] w-1/4 text-center relative'>
             <div className='h-8 mt-4 text-sm'>
               <strong>High</strong>
             </div>
             <div className='absolute w-[1px] h-full bg-gray-300 left-0'></div>
           </li>
 
-          <li className='h-[580px] w-1/5 text-center relative'>
+          {/* <li className='h-[580px] w-1/5 text-center relative'>
             <div className='h-8 mt-4 text-sm'>
               <strong> master</strong> <br />
             </div>
             <div className='absolute w-[1px] h-full bg-gray-300 left-0'></div>
-          </li>
+          </li> */}
         </ul>
 
         <ul className='absolute w-full space-y-3 top-16'>

@@ -9,6 +9,7 @@ import {
   ReplItIcon,
   StackblitzIcon,
 } from '@/components/Icons';
+import { cvLink } from '@/data';
 import Link from 'next/link';
 
 function Hero() {
@@ -65,10 +66,7 @@ function Hero() {
           href='https://replit.com/@MDPabel?tab=repls'>
           <ReplItIcon />
         </Link>
-        <Link
-          aria-label='Open Resume'
-          target='_blank'
-          href='https://drive.google.com/file/d/1A6I4qF3WBwlKskaAT23G5volEAJ-9i4T/view'>
+        <Link aria-label='Open Resume' target='_blank' href={cvLink}>
           <CVIcon />
         </Link>
       </div>

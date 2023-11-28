@@ -105,3 +105,6 @@ export const getProjectsByCountryCode = (code: string) => {
   // @ts-ignore
   return projects[code] ?? 0;
 };
+
+export const cvLink =
+  'https://drive.google.com/file/d/1mX9wiQ5e36N4zzWG88TJZrbjkaQumXZV/view?usp=sharing';

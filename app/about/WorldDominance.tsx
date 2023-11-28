@@ -5,7 +5,7 @@ import {
   getProjectsByCountryCode,
   totalProjects,
   worldDominaation,
-} from './data';
+} from '@/data';
 
 const VectorMap = dynamic(
   // @ts-ignore

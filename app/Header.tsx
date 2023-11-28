@@ -3,6 +3,7 @@ import MobileMenu from './MobileMenu';
 import { ArrowUpRight } from '@/components/Icons';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { cvLink } from '@/data';
 
 export const navItems = [
   {
@@ -36,7 +37,7 @@ const Header = () => {
           <li>
             <Link
               className='flex items-center py-2 shadow-lg px-7 bg-slate-50 rounded-3xl '
-              href='https://drive.google.com/file/d/1mX9wiQ5e36N4zzWG88TJZrbjkaQumXZV/view?usp=sharing'
+              href={cvLink}
               target='_blank'>
               My CV <ArrowUpRight />
             </Link>

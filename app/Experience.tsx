@@ -1,5 +1,5 @@
 import Title from '@/components/Title';
-import { totalWebsiteFixes } from '@/data';
+import { totalClients, totalWebsiteFixes } from '@/data';
 import React from 'react';
 
 const Experience = () => {
@@ -30,7 +30,7 @@ const Experience = () => {
           <li>
             Successfully removed malware from over{' '}
             <strong className='text-gray-600'>
-              1200 client sites across 43% of countries worldwide
+              {totalClients} client sites across 43% of countries worldwide
             </strong>
             , minimizing the impact of the attacks.
           </li>

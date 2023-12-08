@@ -18,7 +18,7 @@ export const navItems = [
 
 const Header = () => {
   return (
-    <header className='relative flex items-center justify-between h-16 max-w-6xl mx-auto mt-10'>
+    <header className='relative flex items-center justify-between h-16 max-w-6xl mx-auto mt-10 z-50'>
       <div className='text-2xl text-gray-600'>
         <Link className='font-medium' href='/'>
           {'<Pabel />'}

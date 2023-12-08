@@ -14,7 +14,7 @@ import Link from 'next/link';
 
 function Hero() {
   return (
-    <div className='relative flex flex-col items-center justify-center w-full overflow-visible text-center'>
+    <div className='relative flex flex-col items-center justify-center w-full overflow-visible text-center z-50'>
       <h1 className='inline-block text-transparent bg-clip-text font-bold text-5xl md:text-7xl tracking-[-1.25px] black-gradient'>
         Hi, I&#x27;m Pabel.
       </h1>

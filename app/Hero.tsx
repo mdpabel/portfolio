@@ -11,6 +11,7 @@ import {
 } from '@/components/Icons';
 import { cvLink } from '@/data';
 import Link from 'next/link';
+import Background from './Background';
 
 function Hero() {
   return (

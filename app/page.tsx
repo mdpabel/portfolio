@@ -9,7 +9,6 @@ export const dynamic = 'force-static';
 export default function Home() {
   return (
     <div className='flex flex-col pt-12 md:pt-20'>
-      <Background />
       <Hero />
       <Skills title='My skills' />
       <Experience />

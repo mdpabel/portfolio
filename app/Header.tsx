@@ -1,10 +1,8 @@
 import Link from 'next/link';
 import MobileMenu from './MobileMenu';
 import { ArrowUpRight } from '@/components/Icons';
-import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { cvLink } from '@/data';
-import Background from './Background';
 
 export const navItems = [
   {

@@ -39,7 +39,7 @@ const MobileMenu = () => {
           display: open ? 'block' : 'none',
         }}
         className='block w-full md:hidden '>
-        <ul className='absolute right-0 z-50 flex flex-col w-full mt-4 bg-white/50 backdrop-blur-3xl rounded-lg md:hidden top-14'>
+        <ul className='absolute right-0 z-50 flex flex-col w-full mt-4 bg-white rounded-lg md:hidden top-14'>
           {navItems.map((item) => (
             <li
               key={item.path}

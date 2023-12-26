@@ -11,11 +11,10 @@ import {
 } from '@/components/Icons';
 import { cvLink } from '@/data';
 import Link from 'next/link';
-import Background from './Background';
 
 function Hero() {
   return (
-    <div className='relative flex flex-col items-center justify-center w-full overflow-visible text-center z-50'>
+    <div className='relative flex flex-col items-center justify-center w-full overflow-visible text-center '>
       <h1 className='inline-block text-transparent bg-clip-text font-bold text-5xl md:text-7xl tracking-[-1.25px] black-gradient'>
         Hi, I&#x27;m Pabel.
       </h1>

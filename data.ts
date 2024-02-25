@@ -107,4 +107,4 @@ export const getProjectsByCountryCode = (code: string) => {
 };
 
 export const cvLink =
-  'https://drive.google.com/file/d/1mX9wiQ5e36N4zzWG88TJZrbjkaQumXZV/view?usp=sharing';
+  'https://drive.google.com/file/d/1rFKaEUbkh_Jv14X3Q6k0GtbWEWaTIIGB/view?usp=sharing';

@@ -4,6 +4,7 @@ import './globals.css';
 import Header from './Header';
 import Footer from './Footer';
 import { Toaster } from '@/components/Toaster';
+import ServiceWorker from './ServiceWorker';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Header />
         <main className='min-h-[80vh]'>{children}</main>
         <Toaster />
+        <ServiceWorker />
         <Footer />
       </body>
     </html>

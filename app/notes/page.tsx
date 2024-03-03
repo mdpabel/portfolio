@@ -4,6 +4,8 @@ import { allNotes } from 'contentlayer/generated';
 import { getMDXComponent } from 'next-contentlayer/hooks';
 import Link from 'next/link';
 
+export const dynamic = 'force-static';
+
 export const formatedNotes = () => {
   return allNotes.map((note) => ({
     ...note,

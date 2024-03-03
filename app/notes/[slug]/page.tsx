@@ -8,6 +8,14 @@ import TimerIcon from './TimerIcon';
 import LeftArrowIcon from './LeftArrowIcon';
 import Link from 'next/link';
 
+export async function generateStaticParams() {
+  const notes = formatedNotes();
+
+  return notes.map((note) => ({
+    slug: note.slug,
+  }));
+}
+
 type PropTypes = { params: { slug: string } };
 
 const getNote = (slug: string) => {

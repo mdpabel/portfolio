@@ -1,5 +1,4 @@
 import React from 'react';
-import { formatedNotes } from '../page';
 import { notFound } from 'next/navigation';
 import { calculateReadingTime, formatDateAndTime } from '@/lib/utils';
 import Image from 'next/image';
@@ -7,30 +6,22 @@ import MyImg from '@/public/me_3.jpg';
 import TimerIcon from './TimerIcon';
 import LeftArrowIcon from './LeftArrowIcon';
 import Link from 'next/link';
+import { getNote, getNotes } from '@/lib/notes';
+
+import Content from './Content';
 
 export async function generateStaticParams() {
-  const notes = formatedNotes();
+  const notes = await getNotes();
 
-  return notes.map((note) => ({
+  return notes?.map((note) => ({
     slug: note.slug,
   }));
 }
 
 type PropTypes = { params: { slug: string } };
 
-const getNote = (slug: string) => {
-  if (slug === '') return;
-
-  const notes = formatedNotes();
-  const note = notes.find((note) => note._raw.flattenedPath === slug);
-
-  if (!note) return notFound();
-
-  return note;
-};
-
-const page = ({ params }: PropTypes) => {
-  const note = getNote(params?.slug);
+const page = async ({ params }: PropTypes) => {
+  const note = await getNote(params?.slug);
 
   if (!note) return notFound();
 
@@ -42,7 +33,9 @@ const page = ({ params }: PropTypes) => {
           <span>Back to Notes</span>
         </span>
       </Link>
-      <h1 className='text-2xl font-medium text-gray-600 mb-2'>{note.title}</h1>
+      <h1 className='text-2xl font-medium text-gray-600 mb-2'>
+        {note?.data?.title}
+      </h1>
       <div className='flex justify-between items-center'>
         <div className='flex items-center gap-2'>
           <Image
@@ -54,8 +47,8 @@ const page = ({ params }: PropTypes) => {
             className='rounded-full'
           />
           <p className='text-sm text-gray-500'>
-            <span>{note.author}</span> /{' '}
-            <span>{formatDateAndTime(note.date)}</span>
+            <span>MD Pabel</span> /{' '}
+            <span>{formatDateAndTime(note.data.date)}</span>
           </p>
         </div>
 
@@ -63,11 +56,11 @@ const page = ({ params }: PropTypes) => {
           <span>
             <TimerIcon />
           </span>
-          <span>{calculateReadingTime(note.body.raw.length)} min read</span>
+          <span>{calculateReadingTime(note.content.length)} min read</span>
         </div>
       </div>
 
-      <note.Content />
+      <Content content={note.content} />
     </div>
   );
 };

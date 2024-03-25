@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const formatDateAndTime = (date: string) => {
+export const formatDateAndTime = (date: Date) => {
   return new Date(date).toLocaleDateString(undefined, {
     day: 'numeric',
     month: 'short',

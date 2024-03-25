@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    serverActions: true,
-  },
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   eslint: {
     ignoreDuringBuilds: true,
   },

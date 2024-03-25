@@ -1,20 +1,18 @@
 import { Input } from '@/components/Input';
 import { formatDateAndTime } from '@/lib/utils';
-import { allNotes } from 'contentlayer/generated';
-import { getMDXComponent } from 'next-contentlayer/hooks';
 import Link from 'next/link';
+
+import TestNote from '@/notes/graph-dsa.mdx';
+import { getNotes } from '@/lib/notes';
 
 export const dynamic = 'force-static';
 
-export const formatedNotes = () => {
-  return allNotes.map((note) => ({
-    ...note,
-    Content: getMDXComponent(note.body.code),
-  }));
-};
+export const formatedNotes = () => {};
 
-const Notes = () => {
-  const notes = formatedNotes();
+const Notes = async () => {
+  const notes = await getNotes();
+
+  console.log(notes);
 
   return (
     <div className='space-y-6 py-10'>
@@ -23,20 +21,21 @@ const Notes = () => {
         placeholder='Search Notes...'
         className='bg-gray-700 text-gray-50'
       />
+
       <ul className='space-y-6'>
-        {notes.map((note, index) => (
+        {notes?.map((note, index) => (
           <li key={index}>
             <Link
-              href={'/notes' + note.slug}
+              href={'/notes/' + note.slug}
               className='flex justify-between items-center'>
-              <div>
-                <h3 className='font-medium line-clamp-1'>{note.title}</h3>
+              <div className='md:max-w-[88%]'>
+                <h3 className='font-medium line-clamp-1'>{note.data.title}</h3>
                 <h4 className='text-gray-600 line-clamp-1 text-sm'>
-                  {note.description}
+                  {note.data.description}
                 </h4>
               </div>
               <div className='hidden md:block text-gray-500 text-sm line-clamp-1'>
-                {formatDateAndTime(note.date)}
+                {formatDateAndTime(note.data.date)}
               </div>
             </Link>
           </li>

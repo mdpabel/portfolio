@@ -106,8 +106,6 @@ const About = async () => {
 
           <WorldDominance />
         </div>
-
-        <Skills title='Languages & Frameworks' />
       </div>
     </div>
   );

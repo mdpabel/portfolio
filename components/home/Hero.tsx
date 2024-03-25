@@ -8,7 +8,7 @@ import {
   LocationIcon,
   ReplItIcon,
   StackblitzIcon,
-} from '@/components/Icons';
+} from '@/components/ui/Icons';
 import { cvLink } from '@/data';
 import Link from 'next/link';
 

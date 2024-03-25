@@ -1,7 +1,7 @@
-import Experience from './Experience';
-import Hero from './Hero';
-import Projects from './Projects';
-import Skills from './Skills';
+import Experience from '../components/home/Experience';
+import Hero from '../components/home/Hero';
+import Projects from '../components/home/Projects';
+import Skills from '../components/home/Skills';
 
 export const dynamic = 'force-static';
 

@@ -8,7 +8,7 @@ import {
   totalWebsiteFixes,
   worldDominaation,
 } from '../../data';
-import Skills from '../Skills';
+import Skills from '../../components/home/Skills';
 import MyImg from '@/public/me_2.jpg';
 
 export const dynamic = 'force-static';

@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "contentlayer build && next build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "contentlayer": "npx contentlayer build"
+    "lint": "next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",

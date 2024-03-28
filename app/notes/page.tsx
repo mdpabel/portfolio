@@ -2,7 +2,6 @@ import { Input } from '@/components/ui/Input';
 import { formatDateAndTime } from '@/lib/utils';
 import Link from 'next/link';
 
-import TestNote from '@/notes/graph-dsa.mdx';
 import { getNotes } from '@/lib/notes';
 
 export const dynamic = 'force-static';

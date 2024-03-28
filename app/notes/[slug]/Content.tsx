@@ -23,13 +23,13 @@ const md = markdownit({
 
 const Content = ({ content }: { content: string }) => {
   return (
-    <div className='pros'>
+    <article className='prose max-w-full'>
       <div
         dangerouslySetInnerHTML={{
           __html: md.render(content),
         }}
       />
-    </div>
+    </article>
   );
 };
 

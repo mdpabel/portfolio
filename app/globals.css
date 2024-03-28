@@ -67,10 +67,6 @@ input[type='radio']:checked + label {
   }
 }
 
-pre {
-  padding: 15px 0;
-}
-
 .line {
   display: inline-block;
   width: 2em;
@@ -78,4 +74,10 @@ pre {
   padding-right: 1em;
   color: #999;
   user-select: none;
+}
+
+pre {
+  padding: 15px 0;
+  background-color: #fff !important;
+  color: #4b413f !important;
 }

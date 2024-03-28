@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { getNotes } from '@/lib/notes';
 import Search from './Search';
 
-export const dynamic = 'force-static';
+// export const dynamic = 'force-static';
 
 type PageProps = {
   searchParams: {

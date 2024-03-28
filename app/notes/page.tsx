@@ -12,8 +12,6 @@ export const formatedNotes = () => {};
 const Notes = async () => {
   const notes = await getNotes();
 
-  console.log(notes);
-
   return (
     <div className='space-y-6 py-10'>
       <h1 className='text-2xl font-semibold text-gray-600 mb-2'>All Notes</h1>

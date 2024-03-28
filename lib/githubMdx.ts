@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 type DataType = {
   name: string;
   content: string;
@@ -10,27 +8,39 @@ async function fetchMdxFiles() {
   const repository = 'notes';
   const branch = 'main';
   const path = '';
-
   const url = `https://api.github.com/repos/${username}/${repository}/contents/${path}?ref=${branch}`;
   const token = process.env.GITHUB_TOKEN;
 
   try {
-    const response = await axios.get<DataType>(url, {
+    const response = await fetch(url, {
       headers: {
         Authorization: `token ${token}`,
       },
+      next: {
+        tags: ['notes'],
+      },
     });
 
-    const mdxFiles = response.data.filter((file: any) =>
-      file.name.endsWith('.md'),
-    );
+    if (!response.ok) {
+      throw new Error('Failed to fetch MDX files');
+    }
+
+    const data: DataType = await response.json();
+
+    const mdxFiles = data.filter((file) => file.name.endsWith('.md'));
 
     const mdxFileContents = await Promise.all(
       mdxFiles.map(async (file: any) => {
-        const fileResponse = await axios.get(file.download_url);
+        const fileResponse = await fetch(file.download_url);
+
+        if (!fileResponse.ok) {
+          throw new Error(`Failed to fetch content for ${file.name}`);
+        }
+
+        const content = await fileResponse.text();
         return {
           name: file.name,
-          content: fileResponse.data,
+          content: content,
         };
       }),
     );

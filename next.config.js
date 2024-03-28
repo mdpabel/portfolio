@@ -8,7 +8,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ['leetcard.jacoblin.cool'],
+    domains: ['leetcard.jacoblin.cool', 'raw.githubusercontent.com'],
     dangerouslyAllowSVG: true,
   },
 };

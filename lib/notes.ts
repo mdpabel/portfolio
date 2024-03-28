@@ -9,17 +9,27 @@ export const getNote = async (slug: string) => {
   return note;
 };
 
-export const getNotes = async () => {
+export const getNotes = async (search?: string) => {
   const files = await fetchMdxFiles();
 
   const parsedFiles = files?.map((file) => matter(file.content));
 
-  return parsedFiles?.map((file) => {
+  const notes = parsedFiles?.map((file) => {
     return {
       ...file,
       slug: generateSlug(file.data.title),
     };
   });
+
+  if (search) {
+    return notes?.filter((note) =>
+      note.data.title.toLowerCase().includes(search.toLowerCase()),
+    );
+  }
+
+  return notes;
+
+  return;
 };
 
 export function generateSlug(filename: string) {

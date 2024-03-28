@@ -3,21 +3,23 @@ import { formatDateAndTime } from '@/lib/utils';
 import Link from 'next/link';
 
 import { getNotes } from '@/lib/notes';
+import Search from './Search';
 
 export const dynamic = 'force-static';
 
-export const formatedNotes = () => {};
+type PageProps = {
+  searchParams: {
+    search: string;
+  };
+};
 
-const Notes = async () => {
-  const notes = await getNotes();
+const Notes = async ({ searchParams }: PageProps) => {
+  const notes = await getNotes(searchParams?.search);
 
   return (
     <div className='space-y-6 py-10'>
       <h1 className='text-2xl font-semibold text-gray-600 mb-2'>All Notes</h1>
-      <Input
-        placeholder='Search Notes...'
-        className='bg-gray-700 text-gray-50'
-      />
+      <Search />
 
       <ul className='space-y-6'>
         {notes?.map((note, index) => (

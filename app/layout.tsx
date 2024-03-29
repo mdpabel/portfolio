@@ -24,6 +24,10 @@ export default function RootLayout({
     <html lang='en'>
       <head>
         <link rel='prefetch' href='/me_2.jpg' />
+        <link
+          rel='prefetch'
+          href='https://www.mdpabel.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fme_2.0d2d691e.jpg&w=2048&q=75'
+        />
         <link rel='prefetch' href='https://www.mdpabel.com/about' />
         <link rel='prefetch' href='https://www.mdpabel.com/notes' />
       </head>

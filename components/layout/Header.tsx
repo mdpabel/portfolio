@@ -13,6 +13,10 @@ export const navItems = [
     label: 'Contact',
     path: '/contact',
   },
+  {
+    label: 'Notes',
+    path: '/notes',
+  },
 ];
 
 const Header = () => {

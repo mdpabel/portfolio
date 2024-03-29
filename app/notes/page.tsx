@@ -2,8 +2,10 @@ import { Input } from '@/components/ui/Input';
 import { formatDateAndTime } from '@/lib/utils';
 import Link from 'next/link';
 
-import { getNotes } from '@/lib/notes';
+import { getNotes } from '@/utils/notes';
 import Search from './Search';
+import View from './View';
+import { Suspense } from 'react';
 
 // export const dynamic = 'force-static';
 
@@ -28,14 +30,22 @@ const Notes = async ({ searchParams }: PageProps) => {
               href={'/notes/' + note.slug}
               className='flex justify-between items-center'>
               <div className='md:max-w-[88%]'>
-                <h3 className='font-medium line-clamp-1'>{note.data.title}</h3>
+                <h3 className='font-medium line-clamp-1'>
+                  {note.file.data.title}
+                </h3>
                 <h4 className='text-gray-600 line-clamp-1 text-sm'>
-                  {note.data.description}
+                  {note.file.data.description}
                 </h4>
               </div>
-              <div className='hidden md:block text-gray-500 text-sm line-clamp-1'>
-                {formatDateAndTime(note.data.date)}
-              </div>
+
+              <Suspense
+                fallback={
+                  <div className='hidden md:block text-gray-500 text-sm line-clamp-1'>
+                    ... views
+                  </div>
+                }>
+                <View title={note.file.data.title} />
+              </Suspense>
             </Link>
           </li>
         ))}

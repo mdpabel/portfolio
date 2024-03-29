@@ -2,36 +2,22 @@ import matter, { GrayMatterFile } from 'gray-matter';
 
 import fetchMdxFiles from './githubMdx';
 import { redis } from '../lib/redis';
+import { cache } from 'react';
 
-type Note = {
-  slug: string;
-  view: unknown;
-  data: {
-    title: string;
-    description: string;
-    date: Date;
-  };
-  content: string;
-  excerpt?: string | undefined;
-  orig: string | Buffer;
-  language: string;
-  matter: string;
-};
-
-export const getNote = async (slug: string) => {
+export const getNote = cache(async (slug: string) => {
   const notes = await getNotes();
   const note = await notes?.find((note) => note.slug === slug);
 
   return note;
-};
+});
 
-export const getNotes = async (search?: string) => {
+export const getNotes = cache(async (search?: string) => {
   const files = await fetchMdxFiles();
 
   const parsedFiles = files?.map((file) => matter(file.content));
 
   if (!parsedFiles) {
-    return []; // Return an empty array if parsedFiles is undefined
+    return [];
   }
 
   const notes = await Promise.all(
@@ -52,7 +38,7 @@ export const getNotes = async (search?: string) => {
   }
 
   return notes;
-};
+});
 
 export function generateSlug(filename: string) {
   return filename.replace(/\.[^/.]+$/, '').replace(/\s+/g, '-');

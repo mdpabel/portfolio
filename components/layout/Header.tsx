@@ -31,7 +31,10 @@ const Header = () => {
         <ul className='items-center hidden space-x-6 text-gray-600 md:flex'>
           {navItems.map((item) => (
             <li key={item.label}>
-              <Link className={cn('font-medium text-base')} href={item.path}>
+              <Link
+                prefetch={true}
+                className={cn('font-medium text-base')}
+                href={item.path}>
                 {item.label}
               </Link>
             </li>

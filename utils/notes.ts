@@ -31,13 +31,19 @@ export const getNotes = cache(async (search?: string) => {
     ),
   );
 
+  const sortedNotes = notes.sort((a, b) =>
+    a.file.data.title.localeCompare(b.file.data.title, undefined, {
+      sensitivity: 'base',
+    }),
+  );
+
   if (search) {
-    return notes.filter((note) =>
+    return sortedNotes.filter((note) =>
       note.file.data.title.toLowerCase().includes(search.toLowerCase()),
     );
   }
 
-  return notes;
+  return sortedNotes;
 });
 
 export function generateSlug(filename: string) {

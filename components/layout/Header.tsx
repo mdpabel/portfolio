@@ -10,12 +10,12 @@ export const navItems = [
     path: '/about',
   },
   {
-    label: 'Contact',
-    path: '/contact',
-  },
-  {
     label: 'Notes',
     path: '/notes',
+  },
+  {
+    label: 'Contact',
+    path: '/contact',
   },
 ];
 

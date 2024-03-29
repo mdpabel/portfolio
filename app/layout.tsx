@@ -22,6 +22,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <head>
+        <link rel='prefetch' href='/me_2.jpg' />
+        <link rel='prefetch' href='https://www.mdpabel.com/about' />
+        <link rel='prefetch' href='https://www.mdpabel.com/notes' />
+      </head>
       <body className={`${inter.className} bg-white/75 px-6 max-w-5xl mx-auto`}>
         <Header />
         <main className='min-h-[80vh]'>{children}</main>

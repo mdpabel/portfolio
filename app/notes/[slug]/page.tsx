@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import React, { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import { calculateReadingTime, formatDateAndTime } from '@/lib/utils';
@@ -10,7 +11,10 @@ import { getNote, getNotes, incrementNoteView } from '@/utils/notes';
 
 import Content from './Content';
 import View from '../View';
-import ScrollToTopButton from '@/components/ScrollToTopButton';
+
+const ScrollToTopButton = dynamic(
+  () => import('@/components/ScrollToTopButton'),
+);
 
 export async function generateStaticParams() {
   const notes = await getNotes();

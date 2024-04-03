@@ -25,7 +25,7 @@ const Notes = async ({ searchParams }: PageProps) => {
 
       <ul className='space-y-6'>
         {notes?.map((note, index) => (
-          <li key={index}>
+          <li key={index} className='transition-transform hover:scale-[1.01]'>
             <Link
               href={'/notes/' + note.slug}
               className='flex justify-between items-center'>

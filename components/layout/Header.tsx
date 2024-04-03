@@ -42,7 +42,7 @@ const Header = () => {
 
           <li>
             <Link
-              className='flex items-center py-2 shadow-lg px-7 bg-slate-50 rounded-3xl '
+              className='flex items-center py-2 shadow-lg px-7 bg-slate-50 rounded-3xl transition-transform hover:scale-[1.05] '
               href={cvLink}
               target='_blank'>
               My CV <ArrowUpRight />

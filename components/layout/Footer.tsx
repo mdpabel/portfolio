@@ -11,19 +11,27 @@ const Footer = () => {
   return (
     <div className='flex  bg-white/50 flex-col items-center gap-4 p-10'>
       <div className='flex gap-4'>
-        <Link aria-label='Email' href='mailto:mdpabel385@gmail.com'>
+        <Link
+          className=' transition-transform hover:scale-[1.2] duration-150'
+          aria-label='Email'
+          href='mailto:mdpabel385@gmail.com'>
           <EmailIcon />
         </Link>
-        <Link aria-label='Phone' href='tel:+8801761442268'>
+        <Link
+          className=' transition-transform hover:scale-[1.2] duration-150'
+          aria-label='Phone'
+          href='tel:+8801761442268'>
           <PhoneIcon />
         </Link>
         <Link
+          className=' transition-transform hover:scale-[1.2] duration-150'
           aria-label='Facebook'
           href='https://facebook.com/mdpabe1'
           target='_blank'>
           <FBIcon />
         </Link>
         <Link
+          className=' transition-transform hover:scale-[1.2] duration-150'
           aria-label='Twitter'
           href='https://facebook.com/mdpabe1'
           target='_blank'>

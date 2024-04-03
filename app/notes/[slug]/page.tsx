@@ -1,4 +1,4 @@
-import dynamic from 'next/dynamic';
+import lazy from 'next/dynamic';
 import React, { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import { calculateReadingTime, formatDateAndTime } from '@/lib/utils';
@@ -12,12 +12,18 @@ import { getNote, getNotes, incrementNoteView } from '@/utils/notes';
 import Content from './Content';
 import View from '../View';
 
-const ScrollToTopButton = dynamic(
-  () => import('@/components/ScrollToTopButton'),
-);
+const ScrollToTopButton = lazy(() => import('@/components/ScrollToTopButton'));
+
+export const dynamic = 'force-static';
 
 export async function generateStaticParams() {
   const notes = await getNotes();
+
+  console.log(
+    notes?.map((note) => ({
+      slug: note.slug,
+    })),
+  );
 
   return notes?.map((note) => ({
     slug: note.slug,

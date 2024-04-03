@@ -10,6 +10,7 @@ import { getNote, getNotes, incrementNoteView } from '@/utils/notes';
 
 import Content from './Content';
 import View from '../View';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 export async function generateStaticParams() {
   const notes = await getNotes();
@@ -79,6 +80,8 @@ const page = async ({ params }: PropTypes) => {
       </div>
 
       <Content content={note.file.content} />
+
+      <ScrollToTopButton />
     </div>
   );
 };

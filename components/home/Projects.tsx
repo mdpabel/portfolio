@@ -12,10 +12,10 @@ const projects = [
   {
     number: '01',
     top: '10%',
-    title: 'WordPress Securities',
+    title: 'Next Gen WordPress',
     subTitle: 'Full stack application',
     imgUrl: wordpresssecurities,
-    description: `WordPressSecurities.com is dedicated to providing top-notch WordPress Security and Malware removal services.`,
+    description: `nextgenwordpress.com is dedicated to providing top-notch WordPress Security and Development services.`,
     technologies: [
       'Typescript',
       'Next.js',
@@ -31,7 +31,7 @@ const projects = [
       'headless wordpress',
       'contentful',
     ],
-    liveLink: 'https://www.wordpresssecurities.com/',
+    liveLink: 'https://www.nextgenwordpress.com/',
     github: 'https://github.com/mdpabel/WordPressSecurities',
   },
   {

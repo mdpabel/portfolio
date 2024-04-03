@@ -4,6 +4,10 @@ import Piller from './Piller';
 
 const skillsArray = [
   {
+    label: 'Java',
+    level: '200px',
+  },
+  {
     label: 'Javascript',
     level: '200px',
   },
@@ -16,19 +20,11 @@ const skillsArray = [
     level: '165px',
   },
   {
-    label: 'Node.js',
-    level: '165px',
+    label: 'Spring Boot',
+    level: '190px',
   },
   {
-    label: 'SQL',
-    level: '165px',
-  },
-  {
-    label: 'Mongodb',
-    level: '145px',
-  },
-  {
-    label: 'React',
+    label: 'React.js',
     level: '190px',
   },
   {
@@ -36,19 +32,23 @@ const skillsArray = [
     level: '190px',
   },
   {
-    label: 'React Native',
-    level: '140px',
-  },
-  {
-    label: 'Express.js',
+    label: 'Node.js',
     level: '165px',
   },
   {
-    label: 'Git, Github',
+    label: 'MySQL',
+    level: '165px',
+  },
+  {
+    label: 'Mongodb',
     level: '145px',
   },
   {
-    label: 'TailwindCSS, HTML, CSS',
+    label: 'Git,Github',
+    level: '145px',
+  },
+  {
+    label: 'TailwindCSS',
     level: '200px',
   },
 ];
@@ -79,30 +79,7 @@ const Skill = ({
           height: level,
         }}
         className='w-10 border-l-8 bar-bg '></div>
-      <span
-        style={{
-          bottom:
-            label === 'TailwindCSS, HTML, CSS'
-              ? '-65px'
-              : label === 'SQL'
-              ? '-30px'
-              : label === 'Python'
-              ? '-38px'
-              : label === 'Express.js'
-              ? '-45px'
-              : label === 'Node.js'
-              ? '-40px'
-              : label === 'Next.js'
-              ? '-40px'
-              : label === 'React'
-              ? '-35px'
-              : label === 'Typescript'
-              ? '-45px'
-              : label === 'Javascript'
-              ? '-42px'
-              : '-50px',
-        }}
-        className='absolute inline-block text-sm rotate-45 bottom-[-50px] left-2 text-gray-500'>
+      <span className='absolute inline-block text-sm rotate-45 left-2 text-gray-500 w-24 -bottom-14'>
         {label}
       </span>
     </li>

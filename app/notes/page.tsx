@@ -7,13 +7,13 @@ import Search from './Search';
 import View from './View';
 import { Suspense } from 'react';
 
-// export const dynamic = 'force-static';
-
 type PageProps = {
   searchParams: {
     search: string;
   };
 };
+
+export const runtime = 'edge';
 
 const Notes = async ({ searchParams }: PageProps) => {
   const notes = await getNotes(searchParams?.search);

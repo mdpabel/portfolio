@@ -5,6 +5,7 @@ import Projects from '../components/home/Projects';
 import Skills from '../components/home/Skills';
 
 export const dynamic = 'force-static';
+export const runtime = 'edge';
 
 export default async function Home() {
   getNotes();

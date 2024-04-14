@@ -12,6 +12,7 @@ import Skills from '../../components/home/Skills';
 import MyImg from '@/public/me_2.jpg';
 
 export const dynamic = 'force-static';
+export const runtime = 'edge';
 
 function calculateYearsSince(startDate: Date): number {
   const currentDate = new Date();

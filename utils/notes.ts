@@ -31,11 +31,9 @@ export const getNotes = cache(async (search?: string) => {
     ),
   );
 
-  const sortedNotes = notes.sort((a, b) =>
-    a.file.data.title.localeCompare(b.file.data.title, undefined, {
-      sensitivity: 'base',
-    }),
-  );
+  const sortedNotes = notes
+    .filter((note) => note.file.data.status === 'published')
+    .sort((a, b) => b.file.data.priority - a.file.data.priority);
 
   if (search) {
     return sortedNotes.filter((note) =>

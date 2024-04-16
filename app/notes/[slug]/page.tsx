@@ -14,7 +14,6 @@ import View from '../View';
 
 const ScrollToTopButton = lazy(() => import('@/components/ScrollToTopButton'));
 
-export const runtime = 'edge';
 export const dynamic = 'force-static';
 
 export async function generateStaticParams() {

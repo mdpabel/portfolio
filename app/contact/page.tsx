@@ -9,7 +9,6 @@ import {
 import ContactForm from './ContactForm';
 
 export const dynamic = 'force-static';
-export const runtime = 'edge';
 
 const Contact = () => {
   return (

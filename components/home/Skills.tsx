@@ -5,7 +5,7 @@ import Piller from './Piller';
 const skillsArray = [
   {
     label: 'Java',
-    level: '200px',
+    level: '170px',
   },
   {
     label: 'Javascript',
@@ -21,7 +21,7 @@ const skillsArray = [
   },
   {
     label: 'Spring Boot',
-    level: '190px',
+    level: '170px',
   },
   {
     label: 'React.js',

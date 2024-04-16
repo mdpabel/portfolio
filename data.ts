@@ -107,4 +107,4 @@ export const getProjectsByCountryCode = (code: string) => {
 };
 
 export const cvLink =
-  'https://drive.google.com/file/d/1rFKaEUbkh_Jv14X3Q6k0GtbWEWaTIIGB/view?usp=sharing';
+  'https://drive.google.com/file/d/1A6I4qF3WBwlKskaAT23G5volEAJ-9i4T/view?fbclid=IwZXh0bgNhZW0CMTAAAR0dDbvU3LUbBKuzFH7_s7jF5QXqAce1Y_oPj9NBrKZbxYeSIK_xBVxrWa0_aem_AcggML-gX0Rq1Wa_oSNwqMwr5QeOVAM1JeTv6u5CK6wESUiYSEg3WxHLnS16Oqw94SaOBg4fNxJrzdHPEtacbRf6';

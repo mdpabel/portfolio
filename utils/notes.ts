@@ -25,7 +25,7 @@ export const getNotes = cache(async (search?: string) => {
       async (file) => {
         return {
           file: await file,
-          slug: generateSlug(file.data.title),
+          slug: generateSlug(file.data.title ?? ''),
         };
       },
     ),

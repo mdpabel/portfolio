@@ -11,6 +11,7 @@ import { getNote, getNotes, incrementNoteView } from '@/utils/notes';
 
 import Content from './Content';
 import View from '../View';
+import { EditIcon } from '@/components/ui/Icons';
 
 const ScrollToTopButton = lazy(() => import('@/components/ScrollToTopButton'));
 
@@ -33,17 +34,24 @@ const page = async ({ params }: PropTypes) => {
 
   incrementNoteView(note.file.data.title);
 
+  const githubUrl = note.githubUrl ?? '';
+
   return (
     <div className='space-y-6 py-10'>
       <Link href='/notes'>
-        <span className='flex text-sm text-gray-500 items-center space-x-2'>
+        <span className='flex text-sm text-gray-900 items-center space-x-2'>
           <LeftArrowIcon />
           <span>Back to Notes</span>
         </span>
       </Link>
-      <h1 className='text-2xl font-medium text-gray-600 mb-2'>
-        {note.file?.data?.title}
-      </h1>
+      <div className='flex justify-between items-center'>
+        <h1 className='text-2xl font-medium text-gray-600 mb-2'>
+          {note.file?.data?.title}
+        </h1>
+        <Link href={githubUrl} target='_blank'>
+          <EditIcon />
+        </Link>
+      </div>
       <div className='flex justify-between items-center'>
         <div className='flex items-center gap-2'>
           <Image

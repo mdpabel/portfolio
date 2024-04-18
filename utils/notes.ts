@@ -14,21 +14,25 @@ export const getNote = cache(async (slug: string) => {
 export const getNotes = cache(async (search?: string) => {
   const files = await fetchMdxFiles();
 
-  const parsedFiles = files?.map((file) => matter(file.content));
+  const parsedFiles = files?.map((file) => ({
+    ...file,
+    content: matter(file.content),
+  }));
 
   if (!parsedFiles) {
     return [];
   }
 
   const notes = await Promise.all(
-    parsedFiles.map<Promise<{ file: GrayMatterFile<string>; slug: string }>>(
-      async (file) => {
-        return {
-          file: await file,
-          slug: generateSlug(file.data.title ?? ''),
-        };
-      },
-    ),
+    parsedFiles.map<
+      Promise<{ file: GrayMatterFile<string>; slug: string; githubUrl: string }>
+    >(async (file) => {
+      return {
+        file: await file.content,
+        slug: generateSlug(file.content.data.title ?? ''),
+        githubUrl: file.githubUrl,
+      };
+    }),
   );
 
   const sortedNotes = notes

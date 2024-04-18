@@ -1,6 +1,7 @@
 type DataType = {
   name: string;
   content: string;
+  githubUrl: string;
 }[];
 
 async function fetchMdxFiles() {
@@ -42,6 +43,7 @@ async function fetchMdxFiles() {
         return {
           name: file.name,
           content: content,
+          githubUrl: file.html_url,
         };
       }),
     );

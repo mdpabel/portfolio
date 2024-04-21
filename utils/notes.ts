@@ -35,12 +35,6 @@ export const getNotes = cache(async (search?: string) => {
     }),
   );
 
-  console.log(
-    notes.map((note) => ({
-      title: note.file.data,
-    })),
-  );
-
   const sortedNotes = notes
     .filter((note) => note.file.data.status === 'published')
     .sort((a, b) => b.file.data.priority - a.file.data.priority);
@@ -65,7 +59,7 @@ export const incrementNoteView = async (title: string) => {
 export const getNoteView = async (title: string) => {
   if (!title) return;
 
-  const view = await redis.get(title);
+  const view = await redis.get(title.toLowerCase());
 
   return Number(view);
 };

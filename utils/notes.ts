@@ -57,9 +57,7 @@ export const incrementNoteView = async (title: string) => {
 };
 
 export const getNoteView = async (title: string) => {
-  if (!title) return;
-
-  const view = await redis.get(title.toLowerCase());
+  const view = await redis.get(title);
 
   return Number(view);
 };

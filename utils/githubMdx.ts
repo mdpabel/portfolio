@@ -50,7 +50,8 @@ async function fetchMdxFiles() {
 
     return mdxFileContents;
   } catch (error) {
-    console.error('Error fetching MDX files:', error);
+    console.error('Error fetching MDX files:');
+    console.error(error);
     return null;
   }
 }

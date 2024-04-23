@@ -36,7 +36,7 @@ export const getNotes = cache(async (search?: string) => {
   );
 
   const sortedNotes = notes
-    .filter((note) => note.file.data.isPublished === true)
+    .filter((note) => note.file.data.status === 'published')
     .sort((a, b) => b.file.data.priority - a.file.data.priority);
 
   console.log(sortedNotes.map((note) => note.file.data));

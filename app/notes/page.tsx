@@ -13,7 +13,8 @@ type PageProps = {
   };
 };
 
-export const runtime = 'edge';
+export const dynamic = 'force-static';
+export const revalidate = 86400;
 
 const Notes = async ({ searchParams }: PageProps) => {
   const notes = await getNotes(searchParams?.search);

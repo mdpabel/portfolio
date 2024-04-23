@@ -13,7 +13,6 @@ type PageProps = {
   };
 };
 
-export const dynamic = 'force-static';
 export const revalidate = 86400;
 
 const Notes = async ({ searchParams }: PageProps) => {

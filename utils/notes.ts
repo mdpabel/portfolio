@@ -39,8 +39,6 @@ export const getNotes = cache(async (search?: string) => {
     .filter((note) => note.file.data.status === 'published')
     .sort((a, b) => b.file.data.priority - a.file.data.priority);
 
-  console.log(sortedNotes.map((note) => note.file.data.title));
-
   if (search) {
     return sortedNotes.filter((note) =>
       note.file.data.title.toLowerCase().includes(search.toLowerCase()),

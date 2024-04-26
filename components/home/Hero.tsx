@@ -31,49 +31,49 @@ function Hero() {
       </div>
       <div className='flex space-x-4 md:space-x-6 pt-10'>
         <Link
-          className=' transition-transform hover:scale-[1.2] duration-150'
+          className='transition-transform hover:scale-[1.2] duration-150 '
           aria-label='leetcode profile'
           target='_blank'
           href='https://leetcode.com/mdpabel/'>
           <LeetCodeIcon />
         </Link>
         <Link
-          className=' transition-transform hover:scale-[1.2] duration-150'
+          className='transition-transform hover:scale-[1.2] duration-150 '
           aria-label='github profile'
           target='_blank'
           href='https://github.com/mdpabel'>
           <GithubIcon />
         </Link>
         <Link
-          className=' transition-transform hover:scale-[1.2] duration-150'
+          className='transition-transform hover:scale-[1.2] duration-150 '
           aria-label='hackerrank profile'
           target='_blank'
           href='https://www.hackerrank.com/mdpabel385'>
           <HackerRank />
         </Link>
         <Link
-          className=' transition-transform hover:scale-[1.2] duration-150'
+          className='transition-transform hover:scale-[1.2] duration-150 '
           aria-label='codeforces profile'
           target='_blank'
           href='https://codeforces.com/profile/MD_Pabel'>
           <CodeForces />
         </Link>
         <Link
-          className=' transition-transform hover:scale-[1.2] duration-150'
+          className='transition-transform hover:scale-[1.2] duration-150 '
           aria-label='stackblitz profile'
           target='_blank'
           href='https://stackblitz.com/@mdpabel'>
           <StackblitzIcon />
         </Link>
         <Link
-          className=' transition-transform hover:scale-[1.2] duration-150'
+          className='transition-transform hover:scale-[1.2] duration-150 '
           aria-label='codeforces profile'
           target='_blank'
           href='https://replit.com/@MDPabel?tab=repls'>
           <ReplItIcon />
         </Link>
         <Link
-          className=' transition-transform hover:scale-[1.2] duration-150'
+          className='transition-transform hover:scale-[1.2] duration-150 '
           aria-label='Open Resume'
           target='_blank'
           href={cvLink}>

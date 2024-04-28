@@ -19,6 +19,7 @@ async function fetchMdxFiles() {
       },
       next: {
         tags: ['notes'],
+        revalidate: 86400,
       },
       cache: 'force-cache',
     });

@@ -4,8 +4,6 @@ import Hero from '../components/home/Hero';
 import Projects from '../components/home/Projects';
 import Skills from '../components/home/Skills';
 
-export const dynamic = 'force-static';
-
 export default async function Home() {
   getNotes();
 

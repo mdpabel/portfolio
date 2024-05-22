@@ -27,9 +27,9 @@ const About = async () => {
   return (
     <div className='space-y-4 py-2 md:py-6'>
       <Image priority={true} src={MyImg} alt='MD Pabel' />
-      <div className='max-w-3xl mx-auto space-y-10'>
+      <div className='space-y-10 mx-auto max-w-3xl'>
         <div className='space-y-4'>
-          <h2 className='text-2xl font-semibold text-gray-800'>About</h2>
+          <h2 className='font-semibold text-2xl text-gray-800'>About</h2>
           <div className='space-y-3 leading-relaxed'>
             <p>
               Hello, I&apos;m <strong className='font-medium'>MD Pabel.</strong>
@@ -50,7 +50,7 @@ const About = async () => {
         </div>
 
         <div className='space-y-4'>
-          <h2 className='text-2xl font-semibold text-gray-800'>Skills</h2>
+          <h2 className='font-semibold text-2xl text-gray-800'>Skills</h2>
           <p>
             Let&apos;s have some fun with numbers from my tech journey. These
             stats don&apos;t hold any deep meaning, but they reflect my tech
@@ -59,8 +59,8 @@ const About = async () => {
         </div>
 
         <div className='space-y-4'>
-          <h2 className='text-2xl font-semibold text-gray-800'>Coding</h2>
-          <ul className='grid md:grid-cols-2 gap-y-2 gap-x-8'>
+          <h2 className='font-semibold text-2xl text-gray-800'>Coding</h2>
+          <ul className='gap-x-8 gap-y-2 grid md:grid-cols-2'>
             <ListItem leftText='Years Coding' rightText={coding} />
             <ListItem leftText='Developed Websites' rightText='10+' />
             <ListItem leftText='DS/Algo Problems Solved' rightText='700+' />
@@ -69,7 +69,7 @@ const About = async () => {
           </ul>
 
           <div className='flex justify-center pt-4'>
-            <Image
+            <img
               width={500}
               height={300}
               alt='Leetcode MD Pabel'
@@ -79,13 +79,13 @@ const About = async () => {
         </div>
 
         <div className='space-y-4'>
-          <h2 className='text-2xl font-semibold text-gray-800'>
+          <h2 className='font-semibold text-2xl text-gray-800'>
             Real World Experience
-            <sup className='text-sm ml-4 text-gray-600'>
+            <sup className='ml-4 text-gray-600 text-sm'>
               Last updated: {lastUpdate}
             </sup>
           </h2>
-          <ul className='grid md:grid-cols-2 gap-y-3 gap-x-8'>
+          <ul className='gap-x-8 gap-y-3 grid md:grid-cols-2'>
             <ListItem
               leftText='Real World Experience'
               rightText={'' + experience + '+'}

@@ -11,7 +11,7 @@ import TimerIcon from './TimerIcon';
 import LeftArrowIcon from './LeftArrowIcon';
 import { getNote, getNotes, incrementNoteView } from '@/utils/notes';
 import Content from './Content';
-import View from '../View';
+import View from '../../../components/note/View';
 import { EditIcon } from '@/components/ui/Icons';
 
 const ScrollToTopButton = lazy(() => import('@/components/ScrollToTopButton'));

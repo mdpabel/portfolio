@@ -1,8 +1,9 @@
 import React from 'react';
 import Title from '@/components/ui/Title';
 import Piller from './Piller';
+import Skill from './Skill';
 
-const skillsArray = [
+export const skillsArray = [
   {
     label: 'Java',
     level: '170px',
@@ -20,7 +21,7 @@ const skillsArray = [
     level: '165px',
   },
   {
-    label: 'Spring Boot',
+    label: 'Docker',
     level: '170px',
   },
   {
@@ -36,7 +37,7 @@ const skillsArray = [
     level: '165px',
   },
   {
-    label: 'MySQL',
+    label: 'SQL',
     level: '165px',
   },
   {
@@ -53,84 +54,51 @@ const skillsArray = [
   },
 ];
 
-const genLeftPixels = (index: number) => {
-  const n = skillsArray.length;
-  return (100 / n) * index - 3 + '%';
-};
-
-const Skill = ({
-  label,
-  index,
-  level,
-}: {
-  label: string;
-  index: number;
-  level: string;
-}) => {
-  return (
-    <li
-      className='absolute bottom-0 bar'
-      style={{
-        left: genLeftPixels(index),
-      }}>
-      <div className='w-8 h-2 bar-top top'></div>
-      <div
-        style={{
-          height: level,
-        }}
-        className='w-10 border-l-8 bar-bg '></div>
-      <span className='absolute inline-block text-sm rotate-45 left-2 text-gray-500 w-24 -bottom-14'>
-        {label}
-      </span>
-    </li>
-  );
-};
-
 const Skills = ({ title }: { title: string }) => {
   return (
-    <div className='relative flex flex-col items-center justify-center w-full max-w-6xl pt-5 mx-auto mt-10 md:mt-15'>
+    <div className='relative flex flex-col justify-center items-center mx-auto mt-10 md:mt-15 pt-5 w-full max-w-6xl'>
       <Title>{title}</Title>
 
       {/* start  */}
-      <div className='relative block w-full lg:hidden'>
+      <div className='block relative lg:hidden w-full'>
         <ul className='flex w-full'>
-          <li className='h-[580px] w-1/4 text-center relative'>
-            <div className='h-8 mt-4 text-sm'>
+          <li className='relative w-1/4 h-[580px] text-center'>
+            <div className='mt-4 h-8 text-sm'>
               <strong>Uh? </strong>
             </div>
-            <div className='absolute w-[1px] h-full bg-gray-300 left-0'></div>
+            <div className='left-0 absolute bg-gray-300 w-[1px] h-full'></div>
           </li>
 
-          <li className='h-[580px] w-1/4 text-center relative'>
-            <div className='h-8 mt-4 text-sm'>
+          <li className='relative w-1/4 h-[580px] text-center'>
+            <div className='mt-4 h-8 text-sm'>
               <strong>Basic</strong>
             </div>
-            <div className='absolute w-[1px] h-full bg-gray-300 left-0'></div>
+            <div className='left-0 absolute bg-gray-300 w-[1px] h-full'></div>
           </li>
 
-          <li className='h-[580px] w-1/4 text-center relative'>
-            <div className='h-8 mt-4 text-sm'>
+          <li className='relative w-1/4 h-[580px] text-center'>
+            <div className='mt-4 h-8 text-sm'>
               <strong className='pr-4'>Medium</strong>
             </div>
-            <div className='absolute w-[1px] h-full bg-gray-300 left-0'></div>
+            <div className='left-0 absolute bg-gray-300 w-[1px] h-full'></div>
           </li>
 
-          <li className='h-[580px] w-1/4 text-center relative'>
-            <div className='h-8 mt-4 text-sm'>
+          <li className='relative w-1/4 h-[580px] text-center'>
+            <div className='mt-4 h-8 text-sm'>
               <strong>High</strong>
             </div>
-            <div className='absolute w-[1px] h-full bg-gray-300 left-0'></div>
+            <div className='left-0 absolute bg-gray-300 w-[1px] h-full'></div>
           </li>
 
-          {/* <li className='h-[580px] w-1/5 text-center relative'>
-            <div className='h-8 mt-4 text-sm'>
+          {/* <li className='relative w-1/5 h-[580px] text-center'>
+            <div className='mt-4 h-8 text-sm'>
               <strong> master</strong> <br />
             </div>
-            <div className='absolute w-[1px] h-full bg-gray-300 left-0'></div>
+            <div className='left-0 absolute bg-gray-300 w-[1px] h-full'></div>
           </li> */}
         </ul>
 
-        <ul className='absolute w-full space-y-3 top-16'>
+        <ul className='top-16 absolute space-y-3 w-full'>
           {skillsArray.map((item, index) => (
             <Piller
               level={item.level}
@@ -143,48 +111,48 @@ const Skills = ({ title }: { title: string }) => {
       </div>
       {/* end  */}
 
-      <div className='relative hidden w-full max-w-4xl lg:block'>
+      <div className='lg:block relative hidden w-full max-w-4xl'>
         <ul className='w-full'>
-          <li className='flex items-center justify-end w-full h-10 my-4 border-b'>
-            <span className='w-[20%] h-8 mt-4 text-sm border-r-4 border-gray-900 md:w-1/4 md:mb-7'>
-              <span className='hidden md:inline-block'>I&apos;m the</span>
+          <li className='flex justify-end items-center my-4 border-b w-full h-10'>
+            <span className='border-gray-900 mt-4 md:mb-7 border-r-4 w-[20%] md:w-1/4 h-8 text-sm'>
+              <span className='md:inline-block hidden'>I&apos;m the</span>
               <strong> master</strong> <br />
-              <span className='hidden md:inline-block'>of the universe.</span>
+              <span className='md:inline-block hidden'>of the universe.</span>
             </span>
           </li>
-          <li className='flex items-center justify-end w-full h-10 my-4 border-b'>
-            <span className='w-[20%] h-8 mt-4 text-sm border-r-4 border-green-500 md:w-1/4 md:mb-7'>
+          <li className='flex justify-end items-center my-4 border-b w-full h-10'>
+            <span className='border-green-500 mt-4 md:mb-7 border-r-4 w-[20%] md:w-1/4 h-8 text-sm'>
               <strong>High</strong> <br />
-              <span className='hidden md:inline-block'>
+              <span className='md:inline-block hidden'>
                 I&apos;m pretty good.
               </span>
             </span>
           </li>
-          <li className='flex items-center justify-end w-full h-10 my-4 border-b'>
-            <span className='w-[20%] h-8 mt-4 text-sm border-r-4 border-green-200 md:w-1/4 md:mb-7'>
+          <li className='flex justify-end items-center my-4 border-b w-full h-10'>
+            <span className='border-green-200 mt-4 md:mb-7 border-r-4 w-[20%] md:w-1/4 h-8 text-sm'>
               <strong>Medium </strong>
-              <span className='hidden md:inline-block'>I&apos;m trying</span>
+              <span className='md:inline-block hidden'>I&apos;m trying</span>
               <br />
-              <span className='hidden md:inline-block'>to improve.</span>
+              <span className='md:inline-block hidden'>to improve.</span>
             </span>
           </li>
-          <li className='flex items-center justify-end w-full h-10 my-4 border-b'>
-            <span className='w-[20%] h-8 mt-4 text-sm border-r-4 border-yellow-500 md:w-1/4 md:mb-7'>
+          <li className='flex justify-end items-center my-4 border-b w-full h-10'>
+            <span className='border-yellow-500 mt-4 md:mb-7 border-r-4 w-[20%] md:w-1/4 h-8 text-sm'>
               <strong>Basic </strong>
-              <span className='hidden md:inline-block'>you can&apos;t </span>
+              <span className='md:inline-block hidden'>you can&apos;t </span>
               <br />
-              <span className='hidden md:inline-block'>always win...</span>
+              <span className='md:inline-block hidden'>always win...</span>
             </span>
           </li>
-          <li className='flex items-center justify-end w-full h-10 my-4 border-b'>
-            <span className='w-[20%] h-8 mt-4 text-sm border-r-4 border-red-500 md:w-1/4 md:mb-7'>
+          <li className='flex justify-end items-center my-4 border-b w-full h-10'>
+            <span className='mt-4 md:mb-7 border-r-4 border-red-500 w-[20%] md:w-1/4 h-8 text-sm'>
               <strong>Uh? </strong> <br />
-              <span className='hidden md:inline-block'>Next question?</span>
+              <span className='md:inline-block hidden'>Next question?</span>
             </span>
           </li>
         </ul>
 
-        <ul className='absolute left-0 flex justify-between w-[75%] bottom-4'>
+        <ul className='bottom-4 left-0 absolute flex justify-between w-[75%]'>
           {skillsArray.map((item, index) => (
             <Skill
               level={item.level}

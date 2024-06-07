@@ -17,10 +17,10 @@ const Piller = ({
         style={{
           width: `${width}%`,
         }}
-        className='h-10 pt-[6px] pl-3 text-sm bar-bg border-t-8 rounded-br-xl'>
+        className='pt-[6px] pl-3 border-t-8 rounded-br-xl h-10 text-sm bar-bg'>
         {label}
       </div>
-      <div className='w-2 h-[33px] bar-top top-sm'></div>
+      <div className='bar-top top-sm w-2 h-[33px]'></div>
     </li>
   );
 };

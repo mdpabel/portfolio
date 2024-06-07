@@ -61,3 +61,5 @@ export const getNoteView = async (title: string) => {
 
   return Number(view);
 };
+
+export type NotesType = Awaited<ReturnType<typeof getNotes>>;

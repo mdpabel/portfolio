@@ -51,13 +51,13 @@ function Hero() {
           href='https://www.hackerrank.com/mdpabel385'>
           <HackerRank />
         </Link>
-        <Link
+        {/* <Link
           className='transition-transform hover:scale-[1.2] duration-150 '
           aria-label='codeforces profile'
           target='_blank'
           href='https://codeforces.com/profile/MD_Pabel'>
           <CodeForces />
-        </Link>
+        </Link> */}
         <Link
           className='transition-transform hover:scale-[1.2] duration-150 '
           aria-label='stackblitz profile'

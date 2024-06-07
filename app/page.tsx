@@ -3,9 +3,10 @@ import Experience from '../components/home/Experience';
 import Hero from '../components/home/Hero';
 import Projects from '../components/home/Projects';
 import Skills from '../components/home/Skills';
-import Notes from '@/components/note/Notes';
 import Title from '@/components/ui/Title';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+const Notes = dynamic(() => import('@/components/note/Notes'));
 
 export default async function Home() {
   const notes = (await getNotes()).slice(0, 5);

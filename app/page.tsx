@@ -6,7 +6,7 @@ import Skills from '../components/home/Skills';
 import Title from '@/components/ui/Title';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-const Notes = dynamic(() => import('@/components/note/Notes'));
+// const Notes = dynamic(() => import('@/components/note/Notes'));
 
 export default async function Home() {
   const notes = (await getNotes()).slice(0, 5);
@@ -17,13 +17,13 @@ export default async function Home() {
       <Skills title='My skills' />
       <Experience />
       <Projects />
-      <div className='space-y-8 pb-10'>
+      {/* <div className='space-y-8 pb-10'>
         <Title>Recent Notes</Title>
-        <Notes notes={notes} />
+        <Notes notes={notes} /> 
         <Link className='inline-block underline' href='/notes'>
           All Notes
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }

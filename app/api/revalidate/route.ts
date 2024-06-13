@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
 
   if (path) {
     revalidatePath(path);
-    revalidateTag(path);
+    revalidatePath(`/${path}/[slug]`, 'page');
     return Response.json({ revalidated: true, now: Date.now(), path: path });
   }
 

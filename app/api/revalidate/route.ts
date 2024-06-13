@@ -1,4 +1,4 @@
-import { revalidatePath } from 'next/cache';
+import { revalidatePath, revalidateTag } from 'next/cache';
 import { NextRequest } from 'next/server';
 
 export async function GET(request: NextRequest) {
@@ -6,11 +6,12 @@ export async function GET(request: NextRequest) {
   const secrete = request.nextUrl.searchParams.get('secrete');
 
   if (secrete != '123') {
-    return;
+    return Response.json({ revalidated: false, secrete: secrete ?? null });
   }
 
   if (path) {
     revalidatePath(path);
+    revalidateTag(path);
     return Response.json({ revalidated: true, now: Date.now(), path: path });
   }
 

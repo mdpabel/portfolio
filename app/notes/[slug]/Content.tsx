@@ -7,6 +7,9 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import CodeCopyBtn from './CodeCopyBtn';
 import { ReactNode } from 'react';
+import remarkToc from 'remark-toc';
+import rehypeSlug from 'rehype-slug';
+import remarkAutolinkHeadings from 'remark-autolink-headings';
 
 const Pre = ({ children }: { children: ReactNode }) => (
   <pre className='blog-pre'>
@@ -17,11 +20,16 @@ const Pre = ({ children }: { children: ReactNode }) => (
 
 const Content = ({ content }: { content: string }) => {
   return (
-    <article className='prose max-w-full'>
+    <article className='max-w-full prose'>
       <ReactMarkdown
         className='post-markdown'
-        rehypePlugins={[rehypeRaw]}
-        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw, rehypeSlug]}
+        remarkPlugins={[
+          remarkGfm,
+          [remarkToc, { heading: 'Table of Contents', maxDepth: 3 }],
+          // @ts-ignore
+          [remarkAutolinkHeadings, { behavior: 'wrap' }],
+        ]}
         components={{
           // @ts-ignore
           pre: Pre,

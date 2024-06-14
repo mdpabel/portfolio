@@ -13,6 +13,8 @@ import { getNote, getNotes, incrementNoteView } from '@/utils/notes';
 import Content from './Content';
 import View from '../../../components/note/View';
 import { EditIcon } from '@/components/ui/Icons';
+import ReadintTime from './ReadingTime';
+import ReadingTime from './ReadingTime';
 
 const ScrollToTopButton = lazy(() => import('@/components/ScrollToTopButton'));
 
@@ -98,9 +100,10 @@ const page = async ({ params }: PropTypes) => {
             <span>
               <TimerIcon />
             </span>
-            <span>
+            {/* <span>
               {calculateReadingTime(note.file.content.length)} min read
-            </span>
+            </span> */}
+            <ReadingTime content={note.file.content} />
           </div>
 
           <div className='bg-black rounded-full w-1 h-1'></div>

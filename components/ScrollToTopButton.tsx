@@ -23,15 +23,15 @@ function ScrollToTopButton() {
   }, []);
 
   const handleClick = () => {
-    const audio = new Audio('/racingSound.mp3');
-    audio.play();
+    // const audio = new Audio('/racingSound.mp3');
+    // audio.play();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <button
       onClick={handleClick}
-      className='fixed bottom-4 right-4 transition-transform duration-200 hover:scale-110'
+      className='right-4 bottom-4 fixed transition-transform duration-200 hover:scale-110'
       style={{ display: isVisible ? 'block' : 'none' }}>
       <Image src={upArrow} alt='scroll up' width={40} height={40} />
     </button>

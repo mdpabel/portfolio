@@ -1,11 +1,5 @@
-import { Input } from '@/components/ui/Input';
-import { formatDateAndTime } from '@/lib/utils';
-import Link from 'next/link';
-
 import { getNotes } from '@/utils/notes';
 import Search from '../../components/note/Search';
-import View from '../../components/note/View';
-import { Suspense } from 'react';
 import Notes from '@/components/note/Notes';
 
 type PageProps = {
@@ -14,7 +8,7 @@ type PageProps = {
   };
 };
 
-export const revalidate = 86400;
+export const dynamic = 'error';
 
 const NotesPage = async ({ searchParams }: PageProps) => {
   const notes = await getNotes(searchParams?.search);

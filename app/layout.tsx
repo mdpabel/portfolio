@@ -8,10 +8,37 @@ import { Toaster } from '@/components/ui/Toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://wordpresssecurities.com'),
-  title: 'MD Pabel - Software Developer',
+  metadataBase: new URL('https://www.mdpabel.com/'),
+  title: {
+    default: 'MD Pabel',
+    template: '%s | MD Pabel',
+  },
   description:
     'Software developer and problem solver with a passion for building innovative solutions.',
+  openGraph: {
+    title: 'MD Pabel',
+    description:
+      'Software developer and problem solver with a passion for building innovative solutions.',
+    url: 'https://www.mdpabel.com',
+    siteName: 'MD Pabel',
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  twitter: {
+    title: 'MD Pabel',
+    card: 'summary_large_image',
+  },
 };
 
 export default function RootLayout({

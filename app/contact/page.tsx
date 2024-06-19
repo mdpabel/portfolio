@@ -7,17 +7,22 @@ import {
   EmailIcon,
 } from '@/components/ui/Icons';
 import ContactForm from './ContactForm';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+};
 
 export const dynamic = 'force-static';
 
 const Contact = () => {
   return (
     <>
-      <div className='max-w-5xl mx-auto pt-12 md:pt-20'>
-        <div className='grid grid-cols-1 gap-10 md:grid-cols-2'>
-          <div className='bg-white/50 flex flex-col items-center justify-center p-5 rounded-lg'>
+      <div className='mx-auto pt-12 md:pt-20 max-w-5xl'>
+        <div className='gap-10 grid grid-cols-1 md:grid-cols-2'>
+          <div className='flex flex-col justify-center items-center bg-white/50 p-5 rounded-lg'>
             <div className='space-y-4'>
-              <h2 className='mb-4 text-4xl font-semibold text-gray-600 '>
+              <h2 className='mb-4 font-semibold text-4xl text-gray-600'>
                 Contact Me
               </h2>
               <div className='flex gap-4'>

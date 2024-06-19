@@ -9,6 +9,11 @@ import {
   worldDominaation,
 } from '../../data';
 import MyImg from '@/public/me_2.jpg';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About',
+};
 
 export const dynamic = 'force-static';
 

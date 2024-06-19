@@ -3,6 +3,8 @@ import Search from '../../components/note/Search';
 import Notes from '@/components/note/Notes';
 import { Metadata } from 'next';
 
+export const dynamic = 'force-static';
+
 export const metadata: Metadata = {
   title: 'Notes',
   description: 'Read my notes on programming, software development and more.',

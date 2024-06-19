@@ -17,7 +17,7 @@ import ReadingTime from './ReadingTime';
 
 const ScrollToTopButton = lazy(() => import('@/components/ScrollToTopButton'));
 
-// export const dynamic = 'force-static';
+export const dynamic = 'force-static';
 
 type PropTypes = { params: { slug: string } };
 

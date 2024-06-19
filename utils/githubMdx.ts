@@ -19,8 +19,8 @@ async function fetchMdxFiles() {
       },
       next: {
         tags: ['notes'],
-        revalidate: 86400, // 1 day
       },
+      cache: 'force-cache',
     });
 
     if (!response.ok) {

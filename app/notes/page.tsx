@@ -8,8 +8,6 @@ type PageProps = {
   };
 };
 
-export const dynamic = 'error';
-
 const NotesPage = async ({ searchParams }: PageProps) => {
   const notes = await getNotes(searchParams?.search);
 

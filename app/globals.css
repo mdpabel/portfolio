@@ -67,6 +67,8 @@ input[type='radio']:checked + label {
   }
 }
 
+/* NOTES START */
+
 .blog-pre {
   margin-bottom: 3em !important;
   position: relative;
@@ -86,3 +88,58 @@ input[type='radio']:checked + label {
   transform: scale(1.1);
   opacity: 0.9;
 }
+
+.post-markdown #table-of-contents {
+  display: none;
+}
+
+.notes-wrapper {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 25px;
+  position: relative;
+}
+
+.toc {
+  position: sticky;
+  top: 0;
+  overflow-y: scroll;
+  height: 100vh;
+  scrollbar-width: thin;
+  scrollbar-color: #c2c2c2 transparent;
+  scrollbar-gutter: stable;
+}
+
+ul {
+}
+
+.toc ul {
+  padding: 0;
+}
+
+.toc ul li a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.toc ul li a:hover {
+  text-decoration: underline;
+}
+
+.toc li ul {
+  padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .notes-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .toc {
+    position: static;
+    order: -1;
+  }
+}
+
+/* NOTES END  */

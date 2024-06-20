@@ -10,6 +10,7 @@ import { ReactNode } from 'react';
 import remarkToc from 'remark-toc';
 import rehypeSlug from 'rehype-slug';
 import remarkAutolinkHeadings from 'remark-autolink-headings';
+import TableOfContents from './TableOfContents';
 
 const Pre = ({ children }: { children: ReactNode }) => (
   <pre className='blog-pre'>
@@ -20,40 +21,45 @@ const Pre = ({ children }: { children: ReactNode }) => (
 
 const Content = ({ content }: { content: string }) => {
   return (
-    <article className='max-w-full prose'>
-      <ReactMarkdown
-        className='post-markdown'
-        rehypePlugins={[rehypeRaw, rehypeSlug]}
-        remarkPlugins={[
-          remarkGfm,
-          [remarkToc, { heading: 'Table of Contents', maxDepth: 3 }],
-          // @ts-ignore
-          [remarkAutolinkHeadings, { behavior: 'wrap' }],
-        ]}
-        components={{
-          // @ts-ignore
-          pre: Pre,
-          code({ node, className = 'blog-code', children, ...props }) {
-            const match = /language-(\w+)/.exec(className || '');
-            return match ? (
-              <SyntaxHighlighter
-                // @ts-ignore
-                style={a11yDark}
-                language={match[1]}
-                PreTag='div'
-                {...props}>
-                {String(children).replace(/\n$/, '')}
-              </SyntaxHighlighter>
-            ) : (
-              <code className={className} {...props}>
-                {children}
-              </code>
-            );
-          },
-        }}>
-        {content}
-      </ReactMarkdown>
-    </article>
+    <div className='notes-wrapper'>
+      <article className='max-w-full prose'>
+        <ReactMarkdown
+          className='post-markdown'
+          rehypePlugins={[rehypeRaw, rehypeSlug]}
+          remarkPlugins={[
+            remarkGfm,
+            // [remarkToc, { heading: 'Table of Contents', maxDepth: 3 }],
+            // @ts-ignore
+            [remarkAutolinkHeadings, { behavior: 'wrap' }],
+          ]}
+          components={{
+            // @ts-ignore
+            pre: Pre,
+            code({ node, className = 'blog-code', children, ...props }) {
+              const match = /language-(\w+)/.exec(className || '');
+              return match ? (
+                <SyntaxHighlighter
+                  // @ts-ignore
+                  style={a11yDark}
+                  language={match[1]}
+                  PreTag='div'
+                  {...props}>
+                  {String(children).replace(/\n$/, '')}
+                </SyntaxHighlighter>
+              ) : (
+                <code className={className} {...props}>
+                  {children}
+                </code>
+              );
+            },
+          }}>
+          {content}
+        </ReactMarkdown>
+      </article>
+      <aside className='max-w-full prose'>
+        <TableOfContents content={content} />
+      </aside>
+    </div>
   );
 };
 

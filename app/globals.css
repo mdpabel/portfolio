@@ -110,6 +110,10 @@ input[type='radio']:checked + label {
   scrollbar-gutter: stable;
 }
 
+.toc h2 {
+  margin-top: 24px !important;
+}
+
 .toc ul {
   padding: 0;
 }

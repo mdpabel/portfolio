@@ -30,7 +30,7 @@ const About = async () => {
   const experience = calculateYearsSince(new Date(2018, 0, 7));
 
   return (
-    <div className='space-y-4 py-2 md:py-6'>
+    <div className='flex flex-col justify-center items-center space-y-4 py-2 md:py-6'>
       <Image priority={true} src={MyImg} alt='MD Pabel' />
       <div className='space-y-10 mx-auto max-w-3xl'>
         <div className='space-y-4'>

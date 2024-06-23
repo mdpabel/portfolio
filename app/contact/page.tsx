@@ -1,12 +1,31 @@
-import Script from 'next/script';
-import React from 'react';
+'use client';
+import React, { useEffect, useRef } from 'react';
 
-const page = () => {
+const Page = () => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!ref.current) return;
+
+    const currentRef = ref.current;
+    const script = document.createElement('script');
+    script.src = 'https://tally.so/widgets/embed.js';
+    script.type = 'text/javascript';
+    script.async = true;
+    currentRef.appendChild(script);
+
+    return () => {
+      if (currentRef.contains(script)) {
+        currentRef.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
-    <div className='relative mx-auto pt-12 md:pt-20 max-w-5xl'>
-      <Script
-        src='https://tally.so/widgets/embed.js'
-        type='text/javascript'></Script>
+    <div
+      ref={ref}
+      id='iframe-container'
+      className='relative mx-auto pt-12 md:pt-20 max-w-5xl'>
       <iframe
         style={{
           position: 'absolute',
@@ -28,4 +47,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

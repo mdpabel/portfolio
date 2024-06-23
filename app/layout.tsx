@@ -52,12 +52,20 @@ export default function RootLayout({
         <link
           rel='prefetch'
           href='https://www.mdpabel.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fme_2.0d2d691e.jpg&w=2048&q=75'
+          as='image'
         />
         <link rel='prefetch' href='https://www.mdpabel.com/about' />
         <link rel='prefetch' href='https://www.mdpabel.com/notes' />
+        <link rel='prefetch' href='https://www.mdpabel.com/contact' />
         <link
           rel='prefetch'
           href='https://tally.so/r/w8kbqP?transparentBackground=1'
+          as='document'
+        />
+        <link
+          rel='prefetch'
+          href='hthttps://tally.so/widgets/embed.js'
+          as='script'
         />
       </head>
       <body className={`${inter.className} bg-white/75 px-6 max-w-6xl mx-auto`}>

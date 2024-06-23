@@ -55,6 +55,10 @@ export default function RootLayout({
         />
         <link rel='prefetch' href='https://www.mdpabel.com/about' />
         <link rel='prefetch' href='https://www.mdpabel.com/notes' />
+        <link
+          rel='prefetch'
+          href='https://tally.so/r/w8kbqP?transparentBackground=1'
+        />
       </head>
       <body className={`${inter.className} bg-white/75 px-6 max-w-6xl mx-auto`}>
         <Header />

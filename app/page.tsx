@@ -9,21 +9,12 @@ import dynamic from 'next/dynamic';
 // const Notes = dynamic(() => import('@/components/note/Notes'));
 
 export default async function Home() {
-  const notes = (await getNotes()).slice(0, 5);
-
   return (
     <div className='flex flex-col pt-12 md:pt-20'>
       <Hero />
       <Skills title='My skills' />
       <Experience />
       <Projects />
-      {/* <div className='space-y-8 pb-10'>
-        <Title>Recent Notes</Title>
-        <Notes notes={notes} /> 
-        <Link className='inline-block underline' href='/notes'>
-          All Notes
-        </Link>
-      </div> */}
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Skills from '../components/home/Skills';
 import Title from '@/components/ui/Title';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import Contact from '@/components/Contact';
 // const Notes = dynamic(() => import('@/components/note/Notes'));
 
 export default async function Home() {

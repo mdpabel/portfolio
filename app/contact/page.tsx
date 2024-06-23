@@ -3,7 +3,7 @@ import React from 'react';
 
 const page = () => {
   return (
-    <div>
+    <div className='relative mx-auto pt-12 md:pt-20 max-w-5xl'>
       <Script
         src='https://tally.so/widgets/embed.js'
         type='text/javascript'></Script>
@@ -15,6 +15,7 @@ const page = () => {
           bottom: 0,
           left: 0,
           border: 0,
+          minHeight: '80vh',
         }}
         data-tally-src='https://tally.so/r/w8kbqP?transparentBackground=1'
         width='100%'

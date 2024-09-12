@@ -6,16 +6,42 @@ import Link from 'next/link';
 import { ArrowUpRight } from '@/components/ui/Icons';
 import wordpresssecurities from '@/public/wordpresssecurities.jpg';
 import vehicleTracking from '@/public/vehicleTracking.png';
+import threeZero from '@/public/3zero.png';
 import snakgeGame from '@/public/snakge-game.jpg';
+import authProjectImg from '@/public/fullstack-auth.png';
 
 const projects = [
   {
     number: '01',
     top: '10%',
+    title: '3zero Digital',
+    subTitle: 'Full stack application',
+    imgUrl: threeZero,
+    description: `A full-stack platform built to deliver digital solutions with zero vulnerabilities, zero downtime, and zero errors, focusing on security and scalability.`,
+    technologies: [
+      'Typescript',
+      'Next.js',
+      'Mongodb',
+      'Prisma',
+      'Clerk Auth',
+      'tailwindcss',
+      'swell',
+      'shadcn/ui',
+      'headless wordpress',
+      'stripe',
+      'resend',
+      'react-email',
+    ],
+    liveLink: 'https://www.3zerodigital.com/',
+    github: 'https://github.com/mdpabel/3zero-digital',
+  },
+  {
+    number: '02',
+    top: '12%',
     title: 'Next Gen WordPress',
     subTitle: 'Full stack application',
     imgUrl: wordpresssecurities,
-    description: `nextgenwordpress.com is dedicated to providing top-notch WordPress Security and Development services.`,
+    description: `A comprehensive solution offering premium WordPress security and development services to ensure high-performance and secure websites.`,
     technologies: [
       'Typescript',
       'Next.js',
@@ -35,13 +61,13 @@ const projects = [
     github: 'https://github.com/mdpabel/WordPressSecurities',
   },
   {
-    number: '02',
-    top: '16%',
+    number: '03',
+    top: '14%',
     title: 'Real time vehicle tracking system',
-    subTitle: 'Full stack application',
+    subTitle: 'IoT based Full stack application',
     imgUrl: vehicleTracking,
     description:
-      'Real-time Vehicle Tracking is a fullstack application that enables users to track the real-time location of vehicles. ',
+      'A real-time vehicle tracking platform that utilizes IoT sensors and live data streams to provide accurate vehicle locations and movement history.',
     technologies: [
       'Javascript',
       'NodeJs',
@@ -56,12 +82,12 @@ const projects = [
     github: 'https://github.com/mdpabel/Real-time-Vehicle-Tracking',
   },
   {
-    number: '03',
-    top: '10%',
+    number: '04',
+    top: '16%',
     title: 'Snake game',
     subTitle: 'Frontend application',
     imgUrl: snakgeGame,
-    description: `A doubly linked list was utilized to enable efficient manipulation of the snake's movements and growth, resulting in a seamless and engaging gaming experience.`,
+    description: `A fun and interactive snake game built with React, featuring smooth movements powered by a doubly linked list for efficient growth and control.`,
     technologies: [
       'Javascript',
       'React',
@@ -72,12 +98,33 @@ const projects = [
     liveLink: 'https://snake-game-pi-amber.vercel.app/',
     github: 'https://github.com/mdpabel/snake-game',
   },
+  {
+    number: '05',
+    top: '18%',
+    title: 'Full stack authentication',
+    subTitle: 'Full stack application',
+    imgUrl: authProjectImg,
+    description: `A full-stack authentication system built with secure email-password login, featuring real-time email verification, password recovery, and role-based access control.`,
+    technologies: [
+      'Typescript',
+      'Next.js',
+      'Prisma',
+      'bcryptjs',
+      'jose',
+      'next-auth',
+      'react-hook-form',
+      'resend',
+      'tailwindcss',
+    ],
+    liveLink: 'https://next-authentication-xi.vercel.app/signup',
+    github: 'https://github.com/mdpabel/Next-authentication',
+  },
 ];
 
 const Projects = () => {
   return (
     <div className='md:mt-[30px]'>
-      <Title className='md:sticky top-5 mt-10'>Personal Projects</Title>
+      <Title className='top-5 md:sticky mt-10'>Personal Projects</Title>
       <div>
         {projects.map((work, index) => (
           <ProjectCard
@@ -127,17 +174,17 @@ const ProjectCard = ({
         top: top ? top : '10%',
         zIndex: parseInt(number) * 10,
       }}
-      className='bg-white/50 px-6 md:px-8 backdrop-blur-3xl flex md:pl-20 py-6 md:py-8 md:sticky rounded-2xl gap-4 flex-col md:flex-row max-w-5xl mx-auto md:max-h-[80vh] my-10 justify-between shadow-sm border'>
-      <div className='flex flex-col justify-between w-full space-y-4 md:w-1/2 '>
-        <h2 className='text-2xl font-medium text-gray-600'>{number}</h2>
-        <div className='space-y-3 '>
-          <h2 className='inline-block text-gray-600 font-medium text-2xl md:text-3xl tracking-[-1.25px] '>
+      className='md:sticky flex md:flex-row flex-col justify-between gap-4 bg-white/50 shadow-sm backdrop-blur-3xl mx-auto my-10 px-6 md:px-8 py-6 md:py-8 md:pl-20 border rounded-2xl max-w-5xl md:max-h-[80vh]'>
+      <div className='flex flex-col justify-between space-y-4 w-full md:w-1/2'>
+        <h2 className='font-medium text-2xl text-gray-600'>{number}</h2>
+        <div className='space-y-3'>
+          <h2 className='inline-block font-medium text-2xl text-gray-600 md:text-3xl tracking-[-1.25px]'>
             {title}
           </h2>
           <h3 className='font-medium text-gray-700'>{subTitle}</h3>
         </div>
         <div className='space-y-4'>
-          <p className='text-base leading-normal text-paragraph'>
+          <p className='text-base text-paragraph leading-normal'>
             {description}
           </p>
           <div className='space-x-3 md:space-x-4'>
@@ -153,13 +200,13 @@ const ProjectCard = ({
             </Button>
           </div>
         </div>
-        <ul className='flex flex-wrap pt-4 text-sm list-disc list-inside gap-x-4 text-paragraph'>
+        <ul className='flex flex-wrap gap-x-4 pt-4 text-paragraph text-sm list-disc list-inside'>
           {technologies.map((label, index) => (
             <li key={index}>{label}</li>
           ))}
         </ul>
       </div>
-      <div className='flex items-center justify-center w-full md:w-1/2'>
+      <div className='flex justify-center items-center w-full md:w-1/2'>
         <Image src={imgUrl} alt={title} />
       </div>
     </div>

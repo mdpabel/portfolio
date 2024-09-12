@@ -1,21 +1,21 @@
 import Title from '@/components/ui/Title';
-import { totalClients, totalWebsiteFixes } from '@/data';
+import { totalClients, totalWebsiteFixes, worldDominaation } from '@/data';
 import React from 'react';
 
 const Experience = () => {
   return (
-    <div className='mt-32 md:mt-[120px] space-y-8 rounded-2xl'>
-      <Title className='md:sticky top-2'>Professional Experience</Title>
-      <div className='bg-white/50 px-8 backdrop-blur-3xl md:pl-20 py-8 md:sticky rounded-2xl gap-4 max-w-5xl mx-auto md:max-h-[80vh] my-10 shadow-sm border space-y-4'>
+    <div className='space-y-8 mt-32 md:mt-[120px] rounded-2xl'>
+      <Title className='top-2 md:sticky'>Professional Experience</Title>
+      <div className='md:sticky gap-4 space-y-4 bg-white/50 shadow-sm backdrop-blur-3xl mx-auto my-10 px-8 py-8 md:pl-20 border rounded-2xl max-w-5xl md:max-h-[80vh]'>
         <div className='flex justify-between w-full'>
           <h2 className='font-semibold text-gray-700'>
             Web Developer | Malware and Virus Analyst
           </h2>
-          <span className='hidden md:inline-block font-semibold text-gray-700'>
+          <span className='md:inline-block hidden font-semibold text-gray-700'>
             Jul 2018 - Present
           </span>
         </div>
-        <ul className='list-disc list-inside space-y-1'>
+        <ul className='space-y-1 list-disc list-inside'>
           <li>
             Worked on contract and freelance basis,{' '}
             <strong className='text-gray-600'>
@@ -30,7 +30,8 @@ const Experience = () => {
           <li>
             Successfully removed malware from over{' '}
             <strong className='text-gray-600'>
-              {totalClients} client sites across 43% of countries worldwide
+              {totalClients} client sites across {worldDominaation}% of
+              countries worldwide
             </strong>
             , minimizing the impact of the attacks.
           </li>

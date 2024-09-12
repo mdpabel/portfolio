@@ -102,7 +102,7 @@ const projects = {
 };
 
 export const totalCountries = 195;
-export const worldDominaation = Math.floor(
+export const worldDominaation = Math.ceil(
   (Object.values(projects).length * 100) / totalCountries,
 );
 
@@ -113,7 +113,7 @@ export const totalProjects = Object.values(projects).reduce(
 
 export const totalWebsiteFixes = 4100;
 
-export const totalClients = totalProjects - (totalProjects % 100);
+export const totalClients = totalProjects;
 
 export const lastUpdate = '05 Nov 23';
 

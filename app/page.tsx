@@ -6,6 +6,7 @@ import Skills from '../components/home/Skills';
 import Title from '@/components/ui/Title';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import CaseStudies from '@/components/home/CaseStudies';
 // const Notes = dynamic(() => import('@/components/note/Notes'));
 
 export default async function Home() {
@@ -14,6 +15,7 @@ export default async function Home() {
       <Hero />
       <Skills title='My skills' />
       <Experience />
+      <CaseStudies />
       <Projects />
     </div>
   );

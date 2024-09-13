@@ -6,7 +6,7 @@ import { ArrowUpRight } from '../ui/Icons';
 const caseStudies = [
   {
     title: 'Malware Detection and Removal from WooCommerce Checkout Page',
-    link: 'https://www.3zerodigital.com/case-study/malware-detection-and-removal-from-woocommerce-checkout-page',
+    link: 'https://www.3zerodigital.com/case-studies/malware-detection-and-removal-from-woocommerce-checkout-page',
     description:
       'Identified and eliminated a malicious script that intercepted customer payment information on a WooCommerce-based website.',
   },
